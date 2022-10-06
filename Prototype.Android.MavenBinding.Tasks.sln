@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.32925.19
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prototype.Android.MavenBinding.Tasks", "src\Microsoft.Android.MavenBinding.Tasks\Prototype.Android.MavenBinding.Tasks.csproj", "{19C3C144-D463-47CF-8C32-6AD90373362C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XamPrototype.Android.MavenBinding.Tasks", "src\Microsoft.Android.MavenBinding.Tasks\XamPrototype.Android.MavenBinding.Tasks.csproj", "{19C3C144-D463-47CF-8C32-6AD90373362C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

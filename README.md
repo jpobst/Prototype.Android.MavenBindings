@@ -16,10 +16,10 @@ Create a new .NET Android Bindings library either through the VS "New Project" d
 dotnet new androidlib
 ```
 
-Add the `Xamarin.AndroidMavenBindings.Preview` NuGet package to the library through VS or the command line:
+Add the `XamPrototype.Android.MavenBinding.Tasks` NuGet package to the library through VS or the command line:
 
 ```
-dotnet add package Xamarin.AndroidMavenBindings.Preview
+dotnet add package XamPrototype.Android.MavenBinding.Tasks
 ```
 
 Let's take an example: Square's `okhttp3` version `4.9.3` available in [Maven](https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp/4.9.3).

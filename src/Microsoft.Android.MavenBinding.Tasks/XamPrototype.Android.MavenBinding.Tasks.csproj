@@ -29,7 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Prototype.Android.MavenBinding.Tasks.targets" Pack="true" PackagePath="build" />
+    <None Update="XamPrototype.Android.MavenBinding.Tasks.targets" Pack="true" PackagePath="build" />
     
     <!-- This is needed because the `lib/{TFM}` folders tell NuGet what frameworks this package supports,
          and we aren't writing anything to those folders because we have no managed assemblies (NU5127) -->

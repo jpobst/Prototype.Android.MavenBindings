@@ -13,8 +13,8 @@
     <MavenCacheDirectory Condition="'$(MavenCacheDirectory)' != '' and !HasTrailingSlash('$(MavenCacheDirectory)')">$(MavenCacheDirectory)\</MavenCacheDirectory>
   </PropertyGroup>
   
-  <UsingTask TaskName="$(MSBuildThisFileName).MavenDownloadTask" AssemblyFile="$(_MavenTasksAssembly)"/>
-  <UsingTask TaskName="$(MSBuildThisFileName).MavenDependencyVerifierTask" AssemblyFile="$(_MavenTasksAssembly)"/>
+  <UsingTask TaskName="Prototype.Android.MavenBinding.Tasks.MavenDownloadTask" AssemblyFile="$(_MavenTasksAssembly)"/>
+  <UsingTask TaskName="Prototype.Android.MavenBinding.Tasks.MavenDependencyVerifierTask" AssemblyFile="$(_MavenTasksAssembly)"/>
 
   <Target Name="MavenRestore" BeforeTargets="_CategorizeAndroidLibraries" DependsOnTargets="ResolvePackageAssets">
 
