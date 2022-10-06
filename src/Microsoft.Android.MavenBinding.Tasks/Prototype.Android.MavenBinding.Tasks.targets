@@ -1,0 +1,40 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <!--The folder where the custom task will be present. It points to inside the nuget package. -->
+    <_TasksAssemblyFolder>$(MSBuildThisFileDirectory)..\tasks\netstandard2.0\</_TasksAssemblyFolder>
+    
+    <!--Reference to the assembly which contains the MSBuild Task-->
+    <_MavenTasksAssembly>$(_TasksAssemblyFolder)$(MSBuildThisFileName).dll</_MavenTasksAssembly>
+
+    <!-- Maven cache directory -->
+    <MavenCacheDirectory Condition="'$(OS)'=='Unix' and '$(MavenCacheDirectory)'==''">$(HOME)\Library\Caches\MavenCacheDirectory\</MavenCacheDirectory>
+    <MavenCacheDirectory Condition="'$(OS)'!='Unix' and '$(MavenCacheDirectory)'==''">$(LocalAppData)\MavenCacheDirectory\</MavenCacheDirectory>
+    <MavenCacheDirectory Condition="'$(MavenCacheDirectory)' != '' and !HasTrailingSlash('$(MavenCacheDirectory)')">$(MavenCacheDirectory)\</MavenCacheDirectory>
+  </PropertyGroup>
+  
+  <UsingTask TaskName="$(MSBuildThisFileName).MavenDownloadTask" AssemblyFile="$(_MavenTasksAssembly)"/>
+  <UsingTask TaskName="$(MSBuildThisFileName).MavenDependencyVerifierTask" AssemblyFile="$(_MavenTasksAssembly)"/>
+
+  <Target Name="MavenRestore" BeforeTargets="_CategorizeAndroidLibraries" DependsOnTargets="ResolvePackageAssets">
+
+    <!-- Download artifacts and POMs from Maven to a local cache. -->
+    <MavenDownloadTask MavenCacheDirectory="$(MavenCacheDirectory)" AndroidMavenLibraries="@(AndroidMavenLibrary)">
+      <Output TaskParameter="ResolvedAndroidMavenLibraries" ItemName="_ResolvedAndroidMavenLibraries" />
+    </MavenDownloadTask>
+
+    <!-- Use downloaded POM files to ensure all Java dependencies are met. -->
+    <MavenDependencyVerifierTask
+      ProjectAssetsLockFile="$(ProjectAssetsFile)"
+      ResolvedAndroidMavenLibraries="@(_ResolvedAndroidMavenLibraries)"
+      PackageReferences="@(PackageReference)"
+      ProjectReferences="@(ProjectReference)"
+      IgnoredMavenDependencies="@(IgnoredMavenDependencies)" />
+
+    <!-- Add @(AndroidMavenLibrary)'s to @(AndroidLibrary)'s. -->
+    <ItemGroup>
+      <AndroidLibrary Include="%(_ResolvedAndroidMavenLibraries.ArtifactFile)" />
+    </ItemGroup>
+    
+  </Target>
+</Project>

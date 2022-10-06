@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.32925.19
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prototype.Android.MavenBinding.Tasks", "src\Microsoft.Android.MavenBinding.Tasks\Prototype.Android.MavenBinding.Tasks.csproj", "{19C3C144-D463-47CF-8C32-6AD90373362C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19C3C144-D463-47CF-8C32-6AD90373362C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19C3C144-D463-47CF-8C32-6AD90373362C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19C3C144-D463-47CF-8C32-6AD90373362C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19C3C144-D463-47CF-8C32-6AD90373362C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D9BE973-BDC3-43D6-B699-D10D61B738BC}
+	EndGlobalSection
+EndGlobal
