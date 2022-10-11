@@ -46,6 +46,17 @@ namespace Prototype.Android.MavenBinding.Tasks
 			return pom!;
 		}
 
+		public static Artifact? CheckForNeededParentPom (string pomFile)
+			=> ParsePom (pomFile).GetParentPom ();
+
+		public static Artifact? GetParentPom (this Project? pom)
+		{
+			if (pom?.Parent != null)
+				return new Artifact (pom.Parent.ArtifactId, pom.Parent.GroupId, pom.Parent.Version);
+
+			return null;
+		}
+
 		// Returns artifact output path
 		public static async Task<string?> DownloadPayload (Artifact artifact, string cacheDir, LogWrapper log)
 		{
@@ -78,7 +89,7 @@ namespace Prototype.Android.MavenBinding.Tasks
 		}
 
 		// Returns artifact output path
-		public static async Task<string?> DownloadPom (Artifact artifact, string cacheDir, LogWrapper log)
+		public static async Task<string?> DownloadPom (Artifact artifact, string cacheDir, LogWrapper log, bool isParent = false)
 		{
 			var version = artifact.Versions.First ();
 			var output_directory = Path.Combine (cacheDir, artifact.GetRepositoryCacheName (), artifact.GroupId, artifact.Id, version);
@@ -95,7 +106,7 @@ namespace Prototype.Android.MavenBinding.Tasks
 			if (!(await TryDownloadPayload (artifact, pom_filename) is string pom_error))
 				return pom_filename;
 
-			log.LogError ("Cannot download POM file for artifact '{0}:{1}'.\n- {2}: {3}", artifact.GroupId, artifact.Id, Path.GetFileName (pom_filename), pom_error);
+			log.LogError ("Cannot download {4}POM file for artifact '{0}:{1}'.\n- {2}: {3}", artifact.GroupId, artifact.Id, Path.GetFileName (pom_filename), pom_error, isParent ? "parent " : "");
 
 			return null;
 		}
@@ -135,8 +146,21 @@ namespace Prototype.Android.MavenBinding.Tasks
 			throw new ArgumentException ($"Unexpected repository type: {type.GetType ()}");
 		}
 
-		public static void FixDependency (Project project, Dependency dependency)
+		public static void FixDependency (Project project, Project? parent, Dependency dependency)
 		{
+			// Handle Parent POM
+			if ((string.IsNullOrEmpty (dependency.Version) || string.IsNullOrEmpty (dependency.Scope)) && parent != null) {
+				var parent_dependency = parent.FindParentDependency (dependency);
+
+				// Try to fish a version out of the parent POM
+				if (string.IsNullOrEmpty (dependency.Version))
+					dependency.Version = ReplaceVersionProperties (parent, parent_dependency?.Version);
+
+				// Try to fish a scope out of the parent POM
+				if (string.IsNullOrEmpty (dependency.Scope))
+					dependency.Scope = parent_dependency?.Scope;
+			}
+
 			var version = dependency.Version;
 
 			if (string.IsNullOrWhiteSpace (version))
@@ -147,13 +171,13 @@ namespace Prototype.Android.MavenBinding.Tasks
 			// VersionRange.Parse cannot handle single number versions that we sometimes see in Maven, like "1".
 			// Fix them to be "1.0".
 			// https://github.com/NuGet/Home/issues/10342
-			if (!version.Contains ("."))
+			if (version != null && !version.Contains ("."))
 				version += ".0";
 
 			dependency.Version = version;
 		}
 
-		static string ReplaceVersionProperties (Project project, string version)
+		static string? ReplaceVersionProperties (Project project, string? version)
 		{
 			// Handle versions with Properties, like:
 			// <properties>
@@ -171,7 +195,7 @@ namespace Prototype.Android.MavenBinding.Tasks
 				return version;
 
 			foreach (var prop in project.Properties.Any)
-				version = version.Replace ($"${{{prop.Name.LocalName}}}", prop.Value);
+				version = version?.Replace ($"${{{prop.Name.LocalName}}}", prop.Value);
 
 			return version;
 		}
@@ -179,5 +203,13 @@ namespace Prototype.Android.MavenBinding.Tasks
 		public static bool IsCompileDependency (this Dependency dependency) => string.IsNullOrWhiteSpace (dependency.Scope) || dependency.Scope.ToLowerInvariant ().Equals ("compile");
 
 		public static bool IsRuntimeDependency (this Dependency dependency) => dependency?.Scope != null && dependency.Scope.ToLowerInvariant ().Equals ("runtime");
+
+		public static Dependency? FindParentDependency (this Project project, Dependency dependency)
+		{
+			return project.DependencyManagement?.Dependencies?.FirstOrDefault (
+				d => d.GroupAndArtifactId () == dependency.GroupAndArtifactId () && d.Classifier != "sources");
+		}
+
+		public static string GroupAndArtifactId (this Dependency dependency) => $"{dependency.GroupId}.{dependency.ArtifactId}";
 	}
 }

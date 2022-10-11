@@ -44,7 +44,7 @@ namespace Prototype.Android.MavenBinding.Tasks
 			var nuget = lock_file.GetLibrary (library, new NuGet.Versioning.NuGetVersion (version));
 
 			if (nuget is null) {
-				log.LogError ("Could not find NuGet package '{0}' version '{1}' in lock file.", library, version);
+				log.LogError ("Could not find NuGet package '{0}' version '{1}' in lock file. Ensure NuGet Restore has run since this <PackageReference> was added.", library, version);
 				return null;
 			}
 

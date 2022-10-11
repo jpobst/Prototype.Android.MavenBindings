@@ -1,3 +1,5 @@
+using System.Linq;
+using MavenNet.Models;
 using Microsoft.Build.Framework;
 using Microsoft.Build.Utilities;
 
@@ -6,6 +8,7 @@ namespace Prototype.Android.MavenBinding.Tasks
 	public class MavenDependencyVerifierTask : Task
 	{
 		public ITaskItem []? ResolvedAndroidMavenLibraries { get; set; }
+		public ITaskItem []? ResolvedAndroidMavenParentLibraries { get; set; }
 		public ITaskItem []? PackageReferences { get; set; }
 		public ITaskItem []? ProjectReferences { get; set; }
 		public ITaskItem []? IgnoredMavenDependencies { get; set; }
@@ -33,6 +36,24 @@ namespace Prototype.Android.MavenBinding.Tasks
 					continue;
 
 				var pom = MavenExtensions.ParsePom (pom_file);
+				Project? parent_pom = null;
+
+				// Load up the parent POM if needed
+				if (pom.GetParentPom () is Artifact parent_artifact) {
+					var parent_id = $"{parent_artifact.GroupId}:{parent_artifact.Id}";
+					var parent = ResolvedAndroidMavenParentLibraries.OrEmpty ().FirstOrDefault (i =>
+						i.ItemSpec.Equals (parent_id, System.StringComparison.OrdinalIgnoreCase) &&
+						i.GetMetadataOrDefault ("Version", "-1").Equals (parent_artifact.Versions.FirstOrDefault (), System.StringComparison.Ordinal));
+
+					if (parent is null) {
+						log.LogMessage ("Could not find needed parent POM task item: '{0}' version '{1}'.", parent_id, parent_artifact.Versions.FirstOrDefault ());
+					} else {
+						var parent_file = parent.GetRequiredMetadata ("ArtifactPom", log);
+
+						if (parent_file != null)
+							parent_pom = MavenExtensions.ParsePom (parent_file);
+					}
+				}
 
 				// For each dependency
 				foreach (var dependency in pom.Dependencies) {
@@ -42,7 +63,7 @@ namespace Prototype.Android.MavenBinding.Tasks
 						continue;
 
 					// Apply various fixups to our dependencies
-					MavenExtensions.FixDependency (pom, dependency);
+					MavenExtensions.FixDependency (pom, parent_pom, dependency);
 
 					// ..see if it fulfilled
 					resolver.IsDependencySatisfied (dependency, log);

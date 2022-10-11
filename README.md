@@ -64,7 +64,6 @@ Now if you try to compile the library the dependencies will be detected as fulfi
 
 ## Known Limitations
 
-- Fails with packages that use "parent POMs" like Guava or Okio. Will be fixed later.
 - Several of Microsoft's published NuGet bindings are missing needed metadata for automatic dependency resolution. Will be audited and fixed. [(Workaround)](https://github.com/jpobst/Prototype.Android.MavenBindings/wiki/MavenDependencyVerifierTask-Advanced-Scenarios)
 
 ## Feedback

@@ -1,23 +1,43 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using MavenNet;
 using MavenNet.Models;
 using Microsoft.Build.Framework;
 using Microsoft.Build.Utilities;
+using NuGet.LibraryModel;
 
 namespace Prototype.Android.MavenBinding.Tasks
 {
 	public class MavenDownloadTask : Task
 	{
+		/// <summary>
+		/// The cache directory to use for Maven artifacts.
+		/// </summary>
 		[Required]
 		public string MavenCacheDirectory { get; set; } = null!; // NRT enforced by [Required]
 
+		/// <summary>
+		/// The set of input Maven libraries that we need to download.
+		/// </summary>
 		public ITaskItem []? AndroidMavenLibraries { get; set; }
 
+		/// <summary>
+		/// The set of requested Maven libraries that we were able to successfully download.
+		/// </summary>
 		[Output]
 		public ITaskItem []? ResolvedAndroidMavenLibraries { get; set; }
 
+		/// <summary>
+		/// Any "parent POMs" we needed to download that will be needed for dependency verification.
+		/// </summary>
+		[Output]
+		public ITaskItem []? ResolvedAndroidMavenParentLibraries { get; set; }
+
+		/// <summary>
+		/// This is a hack for unit tests.
+		/// </summary>
 		public LogWrapper? Logger { get; set; }
 
 		public override bool Execute ()
@@ -64,6 +84,16 @@ namespace Prototype.Android.MavenBinding.Tasks
 			}
 
 			ResolvedAndroidMavenLibraries = resolved.ToArray ();
+
+			// Check for any needed parent POM files
+			var parent_poms = new List<ITaskItem> ();
+
+			foreach (var library in ResolvedAndroidMavenLibraries) {
+				if (await TryGetParentPom (library, log) is TaskItem parent_pom)
+					parent_poms.Add (parent_pom);
+			}
+
+			ResolvedAndroidMavenParentLibraries = parent_poms.ToArray ();
 
 			return !log.HasLoggedErrors;
 		}
@@ -126,6 +156,43 @@ namespace Prototype.Android.MavenBinding.Tasks
 			result.SetMetadata ("ArtifactPom", pom_file);
 
 			return true;
+		}
+
+		async System.Threading.Tasks.Task<TaskItem?> TryGetParentPom (ITaskItem item, LogWrapper log)
+		{
+			var child_pom_file = item.GetRequiredMetadata ("ArtifactPom", log);
+
+			// Shouldn't be possible because we just created this items
+			if (child_pom_file is null)
+				return null;
+
+			// No parent POM needed
+			if (!(MavenExtensions.CheckForNeededParentPom (child_pom_file) is Artifact artifact))
+				return null;
+
+			// Initialize repo (parent will be in same repository as child)
+			var repository = GetRepository (item);
+
+			if (repository is null)
+				return null;
+
+			artifact.SetRepository (repository);
+
+			// Download POM
+			var pom_file = await MavenExtensions.DownloadPom (artifact, MavenCacheDirectory, log);
+
+			if (pom_file is null)
+				return null;
+
+			var result = new TaskItem ($"{artifact.GroupId}:{artifact.Id}");
+
+			result.SetMetadata ("Version", artifact.Versions.FirstOrDefault ());
+			result.SetMetadata ("ArtifactPom", pom_file);
+
+			// Copy repository data
+			item.CopyMetadataTo (result);
+
+			return result;
 		}
 
 		MavenRepository? GetRepository (ITaskItem item)
