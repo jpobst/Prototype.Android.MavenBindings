@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -7,7 +7,7 @@
     <DefineConstants>$(DefineConstants);INTERNAL_NULLABLE_ATTRIBUTES</DefineConstants>
 
     <IsPackable>true</IsPackable>
-    <Version>0.0.1</Version>
+    <Version>0.0.4</Version>
     <Description>Preview feature for creating .NET for Android bindings directly from a Maven respository.</Description>
     <PackageOutputPath>../../nupkg</PackageOutputPath>
     
@@ -18,11 +18,15 @@
     <!-- Tell the SDK to generate a deps.json file, this is needed for the .nupkg. -->
     <GenerateDependencyFile>true</GenerateDependencyFile>
     
+    <!-- Include symbol files (*.pdb) in the built .nupkg -->
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="ILRepack" Version="2.0.18" PrivateAssets="all" />
     <PackageReference Include="MavenNet" Version="2.2.13" PrivateAssets="all" GeneratePathProperty="true" />    
-    <PackageReference Include="Microsoft.Build.Utilities.Core" PrivateAssets="all" ExcludeAssets="Runtime" Version="16.10.0" />
+    <PackageReference Include="Microsoft.Build.Utilities.Core" PrivateAssets="all" ExcludeAssets="Runtime" Version="16.10.0" />    
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" PrivateAssets="all" GeneratePathProperty="true" />    
     <PackageReference Include="NuGet.Common" Version="6.3.0" PrivateAssets="all" GeneratePathProperty="true" />
     <PackageReference Include="NuGet.Packaging" Version="6.3.0" PrivateAssets="all" GeneratePathProperty="true" />
     <PackageReference Include="NuGet.ProjectModel" Version="6.3.0" PrivateAssets="all" GeneratePathProperty="true" />
@@ -57,7 +61,8 @@
     <ItemGroup>
       <!-- The TargetPath is the path inside the package that the source file will be placed.
       This is already precomputed in the ReferenceCopyLocalPaths items' DestinationSubPath, so reuse it here. -->
-      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths)" TargetPath="%(ReferenceCopyLocalPaths.DestinationSubPath)" />
+      <!-- Commented out due to ILRepack-->
+      <!--<BuildOutputInPackage Include="@(ReferenceCopyLocalPaths)" TargetPath="%(ReferenceCopyLocalPaths.DestinationSubPath)" />-->
     </ItemGroup>
   </Target>
 
@@ -67,5 +72,14 @@
     <ItemGroup>
       <BuiltProjectOutputGroupOutput Include="$(ProjectDepsFilePath)" TargetPath="$(ProjectDepsFileName)" FinalOutputPath="$(ProjectDepsFilePath)" />
     </ItemGroup>
+  </Target>
+
+  <Target Name="ILRepacker" AfterTargets="Build" Condition="'$(Configuration)' == 'Release'">
+    <ItemGroup>
+      <InputAssemblies Include="$(TargetPath)" />
+      <InputAssemblies Include="@(ReferenceCopyLocalPaths)" />
+    </ItemGroup>
+
+    <Exec Command="$(ILRepack) /out:$(TargetPath) /internalize:excluded.txt /lib:$(PkgNewtonsoft_Json)\lib\netstandard2.0 @(InputAssemblies->'&quot;%(Identity)&quot;', ' ')" />
   </Target>
 </Project>

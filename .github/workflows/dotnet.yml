@@ -20,7 +20,7 @@ jobs:
         dotnet-version: 6.0.x
         
     - name: Build and Package
-      run: dotnet pack
+      run: dotnet pack -c Release
 
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
