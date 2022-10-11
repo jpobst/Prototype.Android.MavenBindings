@@ -21,12 +21,14 @@
     <!-- Download artifacts and POMs from Maven to a local cache. -->
     <MavenDownloadTask MavenCacheDirectory="$(MavenCacheDirectory)" AndroidMavenLibraries="@(AndroidMavenLibrary)">
       <Output TaskParameter="ResolvedAndroidMavenLibraries" ItemName="_ResolvedAndroidMavenLibraries" />
+      <Output TaskParameter="ResolvedAndroidMavenParentLibraries" ItemName="_ResolvedAndroidMavenParentLibraries" />
     </MavenDownloadTask>
 
     <!-- Use downloaded POM files to ensure all Java dependencies are met. -->
     <MavenDependencyVerifierTask
       ProjectAssetsLockFile="$(ProjectAssetsFile)"
       ResolvedAndroidMavenLibraries="@(_ResolvedAndroidMavenLibraries)"
+      ResolvedAndroidMavenParentLibraries="@(_ResolvedAndroidMavenParentLibraries)"
       PackageReferences="@(PackageReference)"
       ProjectReferences="@(ProjectReference)"
       IgnoredMavenDependencies="@(IgnoredMavenDependencies)" />
