@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using MavenNet;
 using MavenNet.Models;
 using Microsoft.Build.Framework;
@@ -48,6 +49,10 @@ namespace Prototype.Android.MavenBinding.Tasks
 		async System.Threading.Tasks.Task<bool> ExecuteAsync ()
 		{
 			var log = Logger ??= new MSBuildLogWrapper (Log);
+
+			// Download NuGet package list
+			// TODO: Cache this better
+			await TryDownloadNuGetPackageList (log);
 
 			var resolved = new List<ITaskItem> ();
 
@@ -96,6 +101,21 @@ namespace Prototype.Android.MavenBinding.Tasks
 			ResolvedAndroidMavenParentLibraries = parent_poms.ToArray ();
 
 			return !log.HasLoggedErrors;
+		}
+
+		async System.Threading.Tasks.Task TryDownloadNuGetPackageList (LogWrapper log)
+		{
+			try {
+				var http = new HttpClient ();
+
+				var json = await http.GetStringAsync ("https://aka.ms/ms-nuget-packages");
+
+				var outfile = Path.Combine (MavenCacheDirectory, "microsoft-packages.json");
+
+				File.WriteAllText (outfile, json);
+			} catch (Exception ex) {
+				log.LogMessage ("Could not download microsoft-packages.json: {0}", ex);
+			}
 		}
 
 		bool TryGetLocalFiles (ITaskItem item, TaskItem result, LogWrapper log)

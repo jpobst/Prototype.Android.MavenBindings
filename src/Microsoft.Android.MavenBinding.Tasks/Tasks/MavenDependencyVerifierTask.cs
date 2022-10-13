@@ -2,11 +2,14 @@ using System.Linq;
 using MavenNet.Models;
 using Microsoft.Build.Framework;
 using Microsoft.Build.Utilities;
+using XamPrototype.Android.MavenBinding.Tasks;
 
 namespace Prototype.Android.MavenBinding.Tasks
 {
 	public class MavenDependencyVerifierTask : Task
 	{
+		[Required]
+		public string MavenCacheDirectory { get; set; } = null!; // NRT enforced by [Required]
 		public ITaskItem []? ResolvedAndroidMavenLibraries { get; set; }
 		public ITaskItem []? ResolvedAndroidMavenParentLibraries { get; set; }
 		public ITaskItem []? PackageReferences { get; set; }
@@ -26,6 +29,9 @@ namespace Prototype.Android.MavenBinding.Tasks
 			resolver.AddPackageReferences (PackageReferences, log);
 			resolver.AddProjectReferences (ProjectReferences, log);
 			resolver.AddIgnoredDependency (IgnoredMavenDependencies, log);
+
+			// Parse microsoft-packages.json so we can provide package recommendations
+			var ms_packages = new MicrosoftNuGetPackageFinder (MavenCacheDirectory, log);
 
 			// Read POM files so we know which dependencies must be satisfied
 			foreach (var library in ResolvedAndroidMavenLibraries.OrEmpty ()) {
@@ -66,7 +72,7 @@ namespace Prototype.Android.MavenBinding.Tasks
 					MavenExtensions.FixDependency (pom, parent_pom, dependency);
 
 					// ..see if it fulfilled
-					resolver.IsDependencySatisfied (dependency, log);
+					resolver.IsDependencySatisfied (dependency, ms_packages, log);
 				}
 			}
 

@@ -31,7 +31,8 @@
       ResolvedAndroidMavenParentLibraries="@(_ResolvedAndroidMavenParentLibraries)"
       PackageReferences="@(PackageReference)"
       ProjectReferences="@(ProjectReference)"
-      IgnoredMavenDependencies="@(IgnoredMavenDependencies)" />
+      IgnoredMavenDependencies="@(IgnoredMavenDependencies)"
+      MavenCacheDirectory="$(MavenCacheDirectory)" />
 
     <!-- Add @(AndroidMavenLibrary)'s to @(AndroidLibrary)'s. -->
     <ItemGroup>

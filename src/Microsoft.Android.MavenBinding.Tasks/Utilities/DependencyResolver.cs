@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using MavenNet.Models;
 using Microsoft.Build.Framework;
+using XamPrototype.Android.MavenBinding.Tasks;
 
 namespace Prototype.Android.MavenBinding.Tasks
 {
@@ -18,7 +19,7 @@ namespace Prototype.Android.MavenBinding.Tasks
 				finder = NuGetPackageVersionFinder.Create (lockFile!, log);
 		}
 
-		public bool IsDependencySatisfied (Dependency dependency, LogWrapper log)
+		public bool IsDependencySatisfied (Dependency dependency, MicrosoftNuGetPackageFinder packages, LogWrapper log)
 		{
 			// TODO: Various fixups / parent POM 
 			var satisfied = artifacts.Any (a =>
@@ -28,9 +29,10 @@ namespace Prototype.Android.MavenBinding.Tasks
 			);
 
 			if (!satisfied) {
-				log.LogError ("Maven dependency '{0}:{1}' version '{2}' is not satisfied.", dependency.GroupId, dependency.ArtifactId, dependency.Version);
-
-				File.AppendAllText (@"C:\Users\jopobst\Desktop\deps.txt", $"cases.Add (\"{dependency.GroupId}/{dependency.ArtifactId}/{dependency.Version}\");\n");
+				if (packages.GetNuGetPackage ($"{dependency.GroupId}:{dependency.ArtifactId}") is string nuget)
+					log.LogError ("Maven dependency '{0}:{1}' version '{2}' is not satisfied. Microsoft maintains the NuGet package '{3}' that could fulfill this dependency.", dependency.GroupId, dependency.ArtifactId, dependency.Version, nuget);
+				else
+					log.LogError ("Maven dependency '{0}:{1}' version '{2}' is not satisfied.", dependency.GroupId, dependency.ArtifactId, dependency.Version);
 			}
 
 			return satisfied;

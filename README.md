@@ -40,8 +40,8 @@ Add a new `<AndroidMavenLibrary>` which specifies the Java artifact we want to b
 If you compile the binding now, the library will be automatically downloaded from Maven as well as the associated `.pom` file.  The `.pom` file details the dependencies needed by this library, and the following build errors will be generated:
 
 ```
-Error XA0000: Maven dependency 'com.squareup.okio:okio' version '2.8.0' is not satisfied.
-Error XA0000: Maven dependency 'org.jetbrains.kotlin:kotlin-stdlib' version '1.4.10' is not satisfied.
+error XA0000: Maven dependency 'com.squareup.okio:okio' version '2.8.0' is not satisfied. Microsoft maintains the NuGet package 'Square.OkIO' that could fulfill this dependency.
+error XA0000: Maven dependency 'org.jetbrains.kotlin:kotlin-stdlib' version '1.4.10' is not satisfied. Microsoft maintains the NuGet package 'Xamarin.Kotlin.StdLib' that could fulfill this dependency.
 ```
 
 These are both libraries that Microsoft provides official NuGet bindings for, so we can add those NuGet packages:
