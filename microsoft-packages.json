@@ -1,0 +1,1772 @@
+{
+  "packages": [
+    {
+      "javaId": "androidx.activity:activity",
+      "nugetId": "Xamarin.AndroidX.Activity"
+    },
+    {
+      "javaId": "androidx.activity:activity-compose",
+      "nugetId": "Xamarin.AndroidX.Activity.Compose"
+    },
+    {
+      "javaId": "androidx.activity:activity-ktx",
+      "nugetId": "Xamarin.AndroidX.Activity.Ktx"
+    },
+    {
+      "javaId": "androidx.ads:ads-identifier",
+      "nugetId": "Xamarin.AndroidX.Ads.Identifier"
+    },
+    {
+      "javaId": "androidx.ads:ads-identifier-common",
+      "nugetId": "Xamarin.AndroidX.Ads.IdentifierCommon"
+    },
+    {
+      "javaId": "androidx.ads:ads-identifier-provider",
+      "nugetId": "Xamarin.AndroidX.Ads.IdentifierProvider"
+    },
+    {
+      "javaId": "androidx.annotation:annotation",
+      "nugetId": "Xamarin.AndroidX.Annotation"
+    },
+    {
+      "javaId": "androidx.annotation:annotation-experimental",
+      "nugetId": "Xamarin.AndroidX.Annotation.Experimental"
+    },
+    {
+      "javaId": "androidx.appcompat:appcompat",
+      "nugetId": "Xamarin.AndroidX.AppCompat"
+    },
+    {
+      "javaId": "androidx.appcompat:appcompat-resources",
+      "nugetId": "Xamarin.AndroidX.AppCompat.AppCompatResources"
+    },
+    {
+      "javaId": "androidx.arch.core:core-common",
+      "nugetId": "Xamarin.AndroidX.Arch.Core.Common"
+    },
+    {
+      "javaId": "androidx.arch.core:core-runtime",
+      "nugetId": "Xamarin.AndroidX.Arch.Core.Runtime"
+    },
+    {
+      "javaId": "androidx.asynclayoutinflater:asynclayoutinflater",
+      "nugetId": "Xamarin.AndroidX.AsyncLayoutInflater"
+    },
+    {
+      "javaId": "androidx.autofill:autofill",
+      "nugetId": "Xamarin.AndroidX.AutoFill"
+    },
+    {
+      "javaId": "androidx.biometric:biometric",
+      "nugetId": "Xamarin.AndroidX.Biometric"
+    },
+    {
+      "javaId": "androidx.browser:browser",
+      "nugetId": "Xamarin.AndroidX.Browser"
+    },
+    {
+      "javaId": "androidx.camera:camera-camera2",
+      "nugetId": "Xamarin.AndroidX.Camera.Camera2"
+    },
+    {
+      "javaId": "androidx.camera:camera-core",
+      "nugetId": "Xamarin.AndroidX.Camera.Core"
+    },
+    {
+      "javaId": "androidx.camera:camera-extensions",
+      "nugetId": "Xamarin.AndroidX.Camera.Extensions"
+    },
+    {
+      "javaId": "androidx.camera:camera-lifecycle",
+      "nugetId": "Xamarin.AndroidX.Camera.Lifecycle"
+    },
+    {
+      "javaId": "androidx.camera:camera-video",
+      "nugetId": "Xamarin.AndroidX.Camera.Video"
+    },
+    {
+      "javaId": "androidx.camera:camera-view",
+      "nugetId": "Xamarin.AndroidX.Camera.View"
+    },
+    {
+      "javaId": "androidx.car:car",
+      "nugetId": "Xamarin.AndroidX.Car.Car"
+    },
+    {
+      "javaId": "androidx.car:car-cluster",
+      "nugetId": "Xamarin.AndroidX.Car.Cluster"
+    },
+    {
+      "javaId": "androidx.car.app:app",
+      "nugetId": "Xamarin.AndroidX.Car.App.App"
+    },
+    {
+      "javaId": "androidx.cardview:cardview",
+      "nugetId": "Xamarin.AndroidX.CardView"
+    },
+    {
+      "javaId": "androidx.collection:collection",
+      "nugetId": "Xamarin.AndroidX.Collection"
+    },
+    {
+      "javaId": "androidx.collection:collection-ktx",
+      "nugetId": "Xamarin.AndroidX.Collection.Ktx"
+    },
+    {
+      "javaId": "androidx.compose.animation:animation",
+      "nugetId": "Xamarin.AndroidX.Compose.Animation"
+    },
+    {
+      "javaId": "androidx.compose.animation:animation-core",
+      "nugetId": "Xamarin.AndroidX.Compose.Animation.Core"
+    },
+    {
+      "javaId": "androidx.compose.foundation:foundation",
+      "nugetId": "Xamarin.AndroidX.Compose.Foundation"
+    },
+    {
+      "javaId": "androidx.compose.foundation:foundation-layout",
+      "nugetId": "Xamarin.AndroidX.Compose.Foundation.Layout"
+    },
+    {
+      "javaId": "androidx.compose.material:material",
+      "nugetId": "Xamarin.AndroidX.Compose.Material"
+    },
+    {
+      "javaId": "androidx.compose.material:material-icons-core",
+      "nugetId": "Xamarin.AndroidX.Compose.Material.Icons.Core"
+    },
+    {
+      "javaId": "androidx.compose.material:material-icons-extended",
+      "nugetId": "Xamarin.AndroidX.Compose.Material.Icons.Extended"
+    },
+    {
+      "javaId": "androidx.compose.material:material-ripple",
+      "nugetId": "Xamarin.AndroidX.Compose.Material.Ripple"
+    },
+    {
+      "javaId": "androidx.compose.runtime:runtime",
+      "nugetId": "Xamarin.AndroidX.Compose.Runtime"
+    },
+    {
+      "javaId": "androidx.compose.runtime:runtime-livedata",
+      "nugetId": "Xamarin.AndroidX.Compose.Runtime.LiveData"
+    },
+    {
+      "javaId": "androidx.compose.runtime:runtime-rxjava2",
+      "nugetId": "Xamarin.AndroidX.Compose.Runtime.RxJava2"
+    },
+    {
+      "javaId": "androidx.compose.runtime:runtime-saveable",
+      "nugetId": "Xamarin.AndroidX.Compose.Runtime.Saveable"
+    },
+    {
+      "javaId": "androidx.compose.ui:ui",
+      "nugetId": "Xamarin.AndroidX.Compose.UI"
+    },
+    {
+      "javaId": "androidx.compose.ui:ui-geometry",
+      "nugetId": "Xamarin.AndroidX.Compose.UI.Geometry"
+    },
+    {
+      "javaId": "androidx.compose.ui:ui-graphics",
+      "nugetId": "Xamarin.AndroidX.Compose.UI.Graphics"
+    },
+    {
+      "javaId": "androidx.compose.ui:ui-text",
+      "nugetId": "Xamarin.AndroidX.Compose.UI.Text"
+    },
+    {
+      "javaId": "androidx.compose.ui:ui-tooling",
+      "nugetId": "Xamarin.AndroidX.Compose.UI.Tooling"
+    },
+    {
+      "javaId": "androidx.compose.ui:ui-tooling-data",
+      "nugetId": "Xamarin.AndroidX.Compose.UI.Tooling.Data"
+    },
+    {
+      "javaId": "androidx.compose.ui:ui-tooling-preview",
+      "nugetId": "Xamarin.AndroidX.Compose.UI.Tooling.Preview"
+    },
+    {
+      "javaId": "androidx.compose.ui:ui-unit",
+      "nugetId": "Xamarin.AndroidX.Compose.UI.Unit"
+    },
+    {
+      "javaId": "androidx.compose.ui:ui-util",
+      "nugetId": "Xamarin.AndroidX.Compose.UI.Util"
+    },
+    {
+      "javaId": "androidx.compose.ui:ui-viewbinding",
+      "nugetId": "Xamarin.AndroidX.Compose.UI.ViewBinding"
+    },
+    {
+      "javaId": "androidx.concurrent:concurrent-futures",
+      "nugetId": "Xamarin.AndroidX.Concurrent.Futures"
+    },
+    {
+      "javaId": "androidx.constraintlayout:constraintlayout",
+      "nugetId": "Xamarin.AndroidX.ConstraintLayout"
+    },
+    {
+      "javaId": "androidx.constraintlayout:constraintlayout-core",
+      "nugetId": "Xamarin.AndroidX.ConstraintLayout.Core"
+    },
+    {
+      "javaId": "androidx.constraintlayout:constraintlayout-solver",
+      "nugetId": "Xamarin.AndroidX.ConstraintLayout.Solver"
+    },
+    {
+      "javaId": "androidx.contentpager:contentpager",
+      "nugetId": "Xamarin.AndroidX.ContentPager"
+    },
+    {
+      "javaId": "androidx.coordinatorlayout:coordinatorlayout",
+      "nugetId": "Xamarin.AndroidX.CoordinatorLayout"
+    },
+    {
+      "javaId": "androidx.core:core",
+      "nugetId": "Xamarin.AndroidX.Core"
+    },
+    {
+      "javaId": "androidx.core:core-animation",
+      "nugetId": "Xamarin.AndroidX.Core.Animation"
+    },
+    {
+      "javaId": "androidx.core:core-google-shortcuts",
+      "nugetId": "Xamarin.AndroidX.Core.GoogleShortcuts"
+    },
+    {
+      "javaId": "androidx.core:core-ktx",
+      "nugetId": "Xamarin.AndroidX.Core.Core.Ktx"
+    },
+    {
+      "javaId": "androidx.core:core-role",
+      "nugetId": "Xamarin.AndroidX.Core.Role"
+    },
+    {
+      "javaId": "androidx.core:core-splashscreen",
+      "nugetId": "Xamarin.AndroidX.Core.SplashScreen"
+    },
+    {
+      "javaId": "androidx.cursoradapter:cursoradapter",
+      "nugetId": "Xamarin.AndroidX.CursorAdapter"
+    },
+    {
+      "javaId": "androidx.customview:customview",
+      "nugetId": "Xamarin.AndroidX.CustomView"
+    },
+    {
+      "javaId": "androidx.customview:customview-poolingcontainer",
+      "nugetId": "Xamarin.AndroidX.CustomView.PoolingContainer"
+    },
+    {
+      "javaId": "androidx.databinding:databinding-adapters",
+      "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingAdapters"
+    },
+    {
+      "javaId": "androidx.databinding:databinding-common",
+      "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingCommon"
+    },
+    {
+      "javaId": "androidx.databinding:databinding-runtime",
+      "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingRuntime"
+    },
+    {
+      "javaId": "androidx.databinding:viewbinding",
+      "nugetId": "Xamarin.AndroidX.DataBinding.ViewBinding"
+    },
+    {
+      "javaId": "androidx.documentfile:documentfile",
+      "nugetId": "Xamarin.AndroidX.DocumentFile"
+    },
+    {
+      "javaId": "androidx.drawerlayout:drawerlayout",
+      "nugetId": "Xamarin.AndroidX.DrawerLayout"
+    },
+    {
+      "javaId": "androidx.dynamicanimation:dynamicanimation",
+      "nugetId": "Xamarin.AndroidX.DynamicAnimation"
+    },
+    {
+      "javaId": "androidx.emoji:emoji",
+      "nugetId": "Xamarin.AndroidX.Emoji"
+    },
+    {
+      "javaId": "androidx.emoji:emoji-appcompat",
+      "nugetId": "Xamarin.AndroidX.Emoji.AppCompat"
+    },
+    {
+      "javaId": "androidx.emoji:emoji-bundled",
+      "nugetId": "Xamarin.AndroidX.Emoji.Bundled"
+    },
+    {
+      "javaId": "androidx.emoji2:emoji2",
+      "nugetId": "Xamarin.AndroidX.Emoji2"
+    },
+    {
+      "javaId": "androidx.emoji2:emoji2-views-helper",
+      "nugetId": "Xamarin.AndroidX.Emoji2.ViewsHelper"
+    },
+    {
+      "javaId": "androidx.enterprise:enterprise-feedback",
+      "nugetId": "Xamarin.AndroidX.Enterprise.Feedback"
+    },
+    {
+      "javaId": "androidx.exifinterface:exifinterface",
+      "nugetId": "Xamarin.AndroidX.ExifInterface"
+    },
+    {
+      "javaId": "androidx.fragment:fragment",
+      "nugetId": "Xamarin.AndroidX.Fragment"
+    },
+    {
+      "javaId": "androidx.fragment:fragment-ktx",
+      "nugetId": "Xamarin.AndroidX.Fragment.Ktx"
+    },
+    {
+      "javaId": "androidx.gridlayout:gridlayout",
+      "nugetId": "Xamarin.AndroidX.GridLayout"
+    },
+    {
+      "javaId": "androidx.heifwriter:heifwriter",
+      "nugetId": "Xamarin.AndroidX.HeifWriter"
+    },
+    {
+      "javaId": "androidx.interpolator:interpolator",
+      "nugetId": "Xamarin.AndroidX.Interpolator"
+    },
+    {
+      "javaId": "androidx.leanback:leanback",
+      "nugetId": "Xamarin.AndroidX.Leanback"
+    },
+    {
+      "javaId": "androidx.leanback:leanback-preference",
+      "nugetId": "Xamarin.AndroidX.Leanback.Preference"
+    },
+    {
+      "javaId": "androidx.legacy:legacy-preference-v14",
+      "nugetId": "Xamarin.AndroidX.Legacy.Preference.V14"
+    },
+    {
+      "javaId": "androidx.legacy:legacy-support-core-ui",
+      "nugetId": "Xamarin.AndroidX.Legacy.Support.Core.UI"
+    },
+    {
+      "javaId": "androidx.legacy:legacy-support-core-utils",
+      "nugetId": "Xamarin.AndroidX.Legacy.Support.Core.Utils"
+    },
+    {
+      "javaId": "androidx.legacy:legacy-support-v13",
+      "nugetId": "Xamarin.AndroidX.Legacy.Support.V13"
+    },
+    {
+      "javaId": "androidx.legacy:legacy-support-v4",
+      "nugetId": "Xamarin.AndroidX.Legacy.Support.V4"
+    },
+    {
+      "javaId": "androidx.lifecycle:lifecycle-common",
+      "nugetId": "Xamarin.AndroidX.Lifecycle.Common"
+    },
+    {
+      "javaId": "androidx.lifecycle:lifecycle-common-java8",
+      "nugetId": "Xamarin.AndroidX.Lifecycle.Common.Java8"
+    },
+    {
+      "javaId": "androidx.lifecycle:lifecycle-extensions",
+      "nugetId": "Xamarin.AndroidX.Lifecycle.Extensions"
+    },
+    {
+      "javaId": "androidx.lifecycle:lifecycle-livedata",
+      "nugetId": "Xamarin.AndroidX.Lifecycle.LiveData"
+    },
+    {
+      "javaId": "androidx.lifecycle:lifecycle-livedata-core",
+      "nugetId": "Xamarin.AndroidX.Lifecycle.LiveData.Core"
+    },
+    {
+      "javaId": "androidx.lifecycle:lifecycle-livedata-core-ktx",
+      "nugetId": "Xamarin.AndroidX.Lifecycle.LiveData.Core.Ktx"
+    },
+    {
+      "javaId": "androidx.lifecycle:lifecycle-livedata-ktx",
+      "nugetId": "Xamarin.AndroidX.Lifecycle.LiveData.Ktx"
+    },
+    {
+      "javaId": "androidx.lifecycle:lifecycle-process",
+      "nugetId": "Xamarin.AndroidX.Lifecycle.Process"
+    },
+    {
+      "javaId": "androidx.lifecycle:lifecycle-reactivestreams",
+      "nugetId": "Xamarin.AndroidX.Lifecycle.ReactiveStreams"
+    },
+    {
+      "javaId": "androidx.lifecycle:lifecycle-reactivestreams-ktx",
+      "nugetId": "Xamarin.AndroidX.Lifecycle.ReactiveStreams.Ktx"
+    },
+    {
+      "javaId": "androidx.lifecycle:lifecycle-runtime",
+      "nugetId": "Xamarin.AndroidX.Lifecycle.Runtime"
+    },
+    {
+      "javaId": "androidx.lifecycle:lifecycle-runtime-ktx",
+      "nugetId": "Xamarin.AndroidX.Lifecycle.Runtime.Ktx"
+    },
+    {
+      "javaId": "androidx.lifecycle:lifecycle-service",
+      "nugetId": "Xamarin.AndroidX.Lifecycle.Service"
+    },
+    {
+      "javaId": "androidx.lifecycle:lifecycle-viewmodel",
+      "nugetId": "Xamarin.AndroidX.Lifecycle.ViewModel"
+    },
+    {
+      "javaId": "androidx.lifecycle:lifecycle-viewmodel-compose",
+      "nugetId": "Xamarin.AndroidX.Lifecycle.ViewModel.Compose"
+    },
+    {
+      "javaId": "androidx.lifecycle:lifecycle-viewmodel-ktx",
+      "nugetId": "Xamarin.AndroidX.Lifecycle.ViewModel.Ktx"
+    },
+    {
+      "javaId": "androidx.lifecycle:lifecycle-viewmodel-savedstate",
+      "nugetId": "Xamarin.AndroidX.Lifecycle.ViewModelSavedState"
+    },
+    {
+      "javaId": "androidx.loader:loader",
+      "nugetId": "Xamarin.AndroidX.Loader"
+    },
+    {
+      "javaId": "androidx.localbroadcastmanager:localbroadcastmanager",
+      "nugetId": "Xamarin.AndroidX.LocalBroadcastManager"
+    },
+    {
+      "javaId": "androidx.media:media",
+      "nugetId": "Xamarin.AndroidX.Media"
+    },
+    {
+      "javaId": "androidx.media2:media2-common",
+      "nugetId": "Xamarin.AndroidX.Media2.Common"
+    },
+    {
+      "javaId": "androidx.media2:media2-session",
+      "nugetId": "Xamarin.AndroidX.Media2.Session"
+    },
+    {
+      "javaId": "androidx.media2:media2-widget",
+      "nugetId": "Xamarin.AndroidX.Media2.Widget"
+    },
+    {
+      "javaId": "androidx.mediarouter:mediarouter",
+      "nugetId": "Xamarin.AndroidX.MediaRouter"
+    },
+    {
+      "javaId": "androidx.multidex:multidex",
+      "nugetId": "Xamarin.AndroidX.MultiDex"
+    },
+    {
+      "javaId": "androidx.navigation:navigation-common",
+      "nugetId": "Xamarin.AndroidX.Navigation.Common"
+    },
+    {
+      "javaId": "androidx.navigation:navigation-common-ktx",
+      "nugetId": "Xamarin.AndroidX.Navigation.Common.Ktx"
+    },
+    {
+      "javaId": "androidx.navigation:navigation-fragment",
+      "nugetId": "Xamarin.AndroidX.Navigation.Fragment"
+    },
+    {
+      "javaId": "androidx.navigation:navigation-fragment-ktx",
+      "nugetId": "Xamarin.AndroidX.Navigation.Fragment.Ktx"
+    },
+    {
+      "javaId": "androidx.navigation:navigation-runtime",
+      "nugetId": "Xamarin.AndroidX.Navigation.Runtime"
+    },
+    {
+      "javaId": "androidx.navigation:navigation-runtime-ktx",
+      "nugetId": "Xamarin.AndroidX.Navigation.Runtime.Ktx"
+    },
+    {
+      "javaId": "androidx.navigation:navigation-ui",
+      "nugetId": "Xamarin.AndroidX.Navigation.UI"
+    },
+    {
+      "javaId": "androidx.navigation:navigation-ui-ktx",
+      "nugetId": "Xamarin.AndroidX.Navigation.UI.Ktx"
+    },
+    {
+      "javaId": "androidx.paging:paging-common",
+      "nugetId": "Xamarin.AndroidX.Paging.Common"
+    },
+    {
+      "javaId": "androidx.paging:paging-common-ktx",
+      "nugetId": "Xamarin.AndroidX.Paging.Common.Ktx"
+    },
+    {
+      "javaId": "androidx.paging:paging-runtime",
+      "nugetId": "Xamarin.AndroidX.Paging.Runtime"
+    },
+    {
+      "javaId": "androidx.paging:paging-runtime-ktx",
+      "nugetId": "Xamarin.AndroidX.Paging.Runtime.Ktx"
+    },
+    {
+      "javaId": "androidx.paging:paging-rxjava2",
+      "nugetId": "Xamarin.AndroidX.Paging.RxJava2"
+    },
+    {
+      "javaId": "androidx.paging:paging-rxjava2-ktx",
+      "nugetId": "Xamarin.AndroidX.Paging.RxJava2.Ktx"
+    },
+    {
+      "javaId": "androidx.palette:palette",
+      "nugetId": "Xamarin.AndroidX.Palette"
+    },
+    {
+      "javaId": "androidx.palette:palette-ktx",
+      "nugetId": "Xamarin.AndroidX.Palette.Palette.Ktx"
+    },
+    {
+      "javaId": "androidx.percentlayout:percentlayout",
+      "nugetId": "Xamarin.AndroidX.PercentLayout"
+    },
+    {
+      "javaId": "androidx.preference:preference",
+      "nugetId": "Xamarin.AndroidX.Preference"
+    },
+    {
+      "javaId": "androidx.preference:preference-ktx",
+      "nugetId": "Xamarin.AndroidX.Preference.Preference.Ktx"
+    },
+    {
+      "javaId": "androidx.print:print",
+      "nugetId": "Xamarin.AndroidX.Print"
+    },
+    {
+      "javaId": "androidx.profileinstaller:profileinstaller",
+      "nugetId": "Xamarin.AndroidX.ProfileInstaller.ProfileInstaller"
+    },
+    {
+      "javaId": "androidx.recommendation:recommendation",
+      "nugetId": "Xamarin.AndroidX.Recommendation"
+    },
+    {
+      "javaId": "androidx.recyclerview:recyclerview",
+      "nugetId": "Xamarin.AndroidX.RecyclerView"
+    },
+    {
+      "javaId": "androidx.recyclerview:recyclerview-selection",
+      "nugetId": "Xamarin.AndroidX.RecyclerView.Selection"
+    },
+    {
+      "javaId": "androidx.resourceinspection:resourceinspection-annotation",
+      "nugetId": "Xamarin.AndroidX.ResourceInspection.Annotation"
+    },
+    {
+      "javaId": "androidx.room:room-common",
+      "nugetId": "Xamarin.AndroidX.Room.Common"
+    },
+    {
+      "javaId": "androidx.room:room-guava",
+      "nugetId": "Xamarin.AndroidX.Room.Guava"
+    },
+    {
+      "javaId": "androidx.room:room-ktx",
+      "nugetId": "Xamarin.AndroidX.Room.Room.Ktx"
+    },
+    {
+      "javaId": "androidx.room:room-runtime",
+      "nugetId": "Xamarin.AndroidX.Room.Runtime"
+    },
+    {
+      "javaId": "androidx.room:room-rxjava2",
+      "nugetId": "Xamarin.AndroidX.Room.Room.RxJava2"
+    },
+    {
+      "javaId": "androidx.room:room-rxjava3",
+      "nugetId": "Xamarin.AndroidX.Room.Room.RxJava3"
+    },
+    {
+      "javaId": "androidx.savedstate:savedstate",
+      "nugetId": "Xamarin.AndroidX.SavedState"
+    },
+    {
+      "javaId": "androidx.savedstate:savedstate-ktx",
+      "nugetId": "Xamarin.AndroidX.SavedState.SavedState.Ktx"
+    },
+    {
+      "javaId": "androidx.security:security-crypto",
+      "nugetId": "Xamarin.AndroidX.Security.SecurityCrypto"
+    },
+    {
+      "javaId": "androidx.slice:slice-builders",
+      "nugetId": "Xamarin.AndroidX.Slice.Builders"
+    },
+    {
+      "javaId": "androidx.slice:slice-core",
+      "nugetId": "Xamarin.AndroidX.Slice.Core"
+    },
+    {
+      "javaId": "androidx.slice:slice-view",
+      "nugetId": "Xamarin.AndroidX.Slice.View"
+    },
+    {
+      "javaId": "androidx.slidingpanelayout:slidingpanelayout",
+      "nugetId": "Xamarin.AndroidX.SlidingPaneLayout"
+    },
+    {
+      "javaId": "androidx.sqlite:sqlite",
+      "nugetId": "Xamarin.AndroidX.Sqlite"
+    },
+    {
+      "javaId": "androidx.sqlite:sqlite-framework",
+      "nugetId": "Xamarin.AndroidX.Sqlite.Framework"
+    },
+    {
+      "javaId": "androidx.startup:startup-runtime",
+      "nugetId": "Xamarin.AndroidX.Startup.StartupRuntime"
+    },
+    {
+      "javaId": "androidx.swiperefreshlayout:swiperefreshlayout",
+      "nugetId": "Xamarin.AndroidX.SwipeRefreshLayout"
+    },
+    {
+      "javaId": "androidx.tracing:tracing",
+      "nugetId": "Xamarin.AndroidX.Tracing.Tracing"
+    },
+    {
+      "javaId": "androidx.transition:transition",
+      "nugetId": "Xamarin.AndroidX.Transition"
+    },
+    {
+      "javaId": "androidx.tvprovider:tvprovider",
+      "nugetId": "Xamarin.AndroidX.TvProvider"
+    },
+    {
+      "javaId": "androidx.vectordrawable:vectordrawable",
+      "nugetId": "Xamarin.AndroidX.VectorDrawable"
+    },
+    {
+      "javaId": "androidx.vectordrawable:vectordrawable-animated",
+      "nugetId": "Xamarin.AndroidX.VectorDrawable.Animated"
+    },
+    {
+      "javaId": "androidx.versionedparcelable:versionedparcelable",
+      "nugetId": "Xamarin.AndroidX.VersionedParcelable"
+    },
+    {
+      "javaId": "androidx.viewpager:viewpager",
+      "nugetId": "Xamarin.AndroidX.ViewPager"
+    },
+    {
+      "javaId": "androidx.viewpager2:viewpager2",
+      "nugetId": "Xamarin.AndroidX.ViewPager2"
+    },
+    {
+      "javaId": "androidx.wear:wear",
+      "nugetId": "Xamarin.AndroidX.Wear"
+    },
+    {
+      "javaId": "androidx.wear:wear-input",
+      "nugetId": "Xamarin.AndroidX.Wear.Input"
+    },
+    {
+      "javaId": "androidx.wear:wear-ongoing",
+      "nugetId": "Xamarin.AndroidX.Wear.Ongoing"
+    },
+    {
+      "javaId": "androidx.wear:wear-phone-interactions",
+      "nugetId": "Xamarin.AndroidX.Wear.PhoneInteractions"
+    },
+    {
+      "javaId": "androidx.wear:wear-remote-interactions",
+      "nugetId": "Xamarin.AndroidX.Wear.RemoteInteractions"
+    },
+    {
+      "javaId": "androidx.webkit:webkit",
+      "nugetId": "Xamarin.AndroidX.WebKit"
+    },
+    {
+      "javaId": "androidx.window:window",
+      "nugetId": "Xamarin.AndroidX.Window"
+    },
+    {
+      "javaId": "androidx.window:window-extensions",
+      "nugetId": "Xamarin.AndroidX.Window.WindowExtensions"
+    },
+    {
+      "javaId": "androidx.window:window-java",
+      "nugetId": "Xamarin.AndroidX.Window.WindowJava"
+    },
+    {
+      "javaId": "androidx.window:window-rxjava2",
+      "nugetId": "Xamarin.AndroidX.Window.WindowRxJava2"
+    },
+    {
+      "javaId": "androidx.window:window-rxjava3",
+      "nugetId": "Xamarin.AndroidX.Window.WindowRxJava3"
+    },
+    {
+      "javaId": "androidx.work:work-runtime",
+      "nugetId": "Xamarin.AndroidX.Work.Runtime"
+    },
+    {
+      "javaId": "androidx.work:work-runtime-ktx",
+      "nugetId": "Xamarin.AndroidX.Work.Work.Runtime.Ktx"
+    },
+    {
+      "javaId": "com.android.installreferrer:installreferrer",
+      "nugetId": "Xamarin.Google.Android.InstallReferrer"
+    },
+    {
+      "javaId": "com.android.volley:volley",
+      "nugetId": "Xamarin.Android.Volley"
+    },
+    {
+      "javaId": "com.android.volley:volley-cronet",
+      "nugetId": "Xamarin.Android.Volley.CroNet"
+    },
+    {
+      "javaId": "com.github.bumptech.glide:annotations",
+      "nugetId": "Xamarin.Android.Glide.Annotations"
+    },
+    {
+      "javaId": "com.github.bumptech.glide:disklrucache",
+      "nugetId": "Xamarin.Android.Glide.DiskLruCache"
+    },
+    {
+      "javaId": "com.github.bumptech.glide:gifdecoder",
+      "nugetId": "Xamarin.Android.Glide.GifDecoder"
+    },
+    {
+      "javaId": "com.github.bumptech.glide:glide",
+      "nugetId": "Xamarin.Android.Glide"
+    },
+    {
+      "javaId": "com.github.bumptech.glide:recyclerview-integration",
+      "nugetId": "Xamarin.Android.Glide.RecyclerViewIntegration"
+    },
+    {
+      "javaId": "com.google.accompanist:accompanist-appcompat-theme",
+      "nugetId": "Xamarin.Google.Accompanist.AppCompat.Theme"
+    },
+    {
+      "javaId": "com.google.accompanist:accompanist-drawablepainter",
+      "nugetId": "Xamarin.Google.Accompanist.DrawablePainter"
+    },
+    {
+      "javaId": "com.google.accompanist:accompanist-flowlayout",
+      "nugetId": "Xamarin.Google.Accompanist.FlowLayout"
+    },
+    {
+      "javaId": "com.google.accompanist:accompanist-pager",
+      "nugetId": "Xamarin.Google.Accompanist.Pager"
+    },
+    {
+      "javaId": "com.google.accompanist:accompanist-pager-indicators",
+      "nugetId": "Xamarin.Google.Accompanist.Pager.Indicators"
+    },
+    {
+      "javaId": "com.google.accompanist:accompanist-permissions",
+      "nugetId": "Xamarin.Google.Accompanist.Permissions"
+    },
+    {
+      "javaId": "com.google.accompanist:accompanist-placeholder",
+      "nugetId": "Xamarin.Google.Accompanist.Placeholder"
+    },
+    {
+      "javaId": "com.google.accompanist:accompanist-placeholder-material",
+      "nugetId": "Xamarin.Google.Accompanist.Placeholder.Material"
+    },
+    {
+      "javaId": "com.google.accompanist:accompanist-swiperefresh",
+      "nugetId": "Xamarin.Google.Accompanist.SwipeRefresh"
+    },
+    {
+      "javaId": "com.google.accompanist:accompanist-systemuicontroller",
+      "nugetId": "Xamarin.Google.Accompanist.SystemUIController"
+    },
+    {
+      "javaId": "com.google.android:annotations",
+      "nugetId": "Xamarin.GoogleAndroid.Annotations"
+    },
+    {
+      "javaId": "com.google.android.datatransport:transport-api",
+      "nugetId": "Xamarin.Google.Android.DataTransport.TransportApi"
+    },
+    {
+      "javaId": "com.google.android.datatransport:transport-backend-cct",
+      "nugetId": "Xamarin.Google.Android.DataTransport.TransportBackendCct"
+    },
+    {
+      "javaId": "com.google.android.datatransport:transport-runtime",
+      "nugetId": "Xamarin.Google.Android.DataTransport.TransportRuntime"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-ads",
+      "nugetId": "Xamarin.GooglePlayServices.Ads"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-ads-base",
+      "nugetId": "Xamarin.GooglePlayServices.Ads.Base"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-ads-identifier",
+      "nugetId": "Xamarin.GooglePlayServices.Ads.Identifier"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-ads-lite",
+      "nugetId": "Xamarin.GooglePlayServices.Ads.Lite"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-afs-native",
+      "nugetId": "Xamarin.GooglePlayServices.AFS.Native"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-analytics",
+      "nugetId": "Xamarin.GooglePlayServices.Analytics"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-analytics-impl",
+      "nugetId": "Xamarin.GooglePlayServices.Analytics.Impl"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-appinvite",
+      "nugetId": "Xamarin.GooglePlayServices.AppInvite"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-appset",
+      "nugetId": "Xamarin.GooglePlayServices.AppSet"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-audience",
+      "nugetId": "Xamarin.GooglePlayServices.Audience"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-auth",
+      "nugetId": "Xamarin.GooglePlayServices.Auth"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-auth-api-phone",
+      "nugetId": "Xamarin.GooglePlayServices.Auth.Api.Phone"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-auth-base",
+      "nugetId": "Xamarin.GooglePlayServices.Auth.Base"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-auth-blockstore",
+      "nugetId": "Xamarin.GooglePlayServices.Auth.Blockstore"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-awareness",
+      "nugetId": "Xamarin.GooglePlayServices.Awareness"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-base",
+      "nugetId": "Xamarin.GooglePlayServices.Base"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-basement",
+      "nugetId": "Xamarin.GooglePlayServices.Basement"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-cast",
+      "nugetId": "Xamarin.GooglePlayServices.Cast"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-cast-framework",
+      "nugetId": "Xamarin.GooglePlayServices.Cast.Framework"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-cast-tv",
+      "nugetId": "Xamarin.GooglePlayServices.Cast.TV"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-clearcut",
+      "nugetId": "Xamarin.GooglePlayServices.Clearcut"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-cloud-messaging",
+      "nugetId": "Xamarin.GooglePlayServices.CloudMessaging"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-cronet",
+      "nugetId": "Xamarin.GooglePlayServices.CroNet"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-drive",
+      "nugetId": "Xamarin.GooglePlayServices.Drive"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-fido",
+      "nugetId": "Xamarin.GooglePlayServices.Fido"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-fitness",
+      "nugetId": "Xamarin.GooglePlayServices.Fitness"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-flags",
+      "nugetId": "Xamarin.GooglePlayServices.Flags"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-games",
+      "nugetId": "Xamarin.GooglePlayServices.Games"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-gass",
+      "nugetId": "Xamarin.GooglePlayServices.Gass"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-gcm",
+      "nugetId": "Xamarin.GooglePlayServices.Gcm"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-identity",
+      "nugetId": "Xamarin.GooglePlayServices.Identity"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-iid",
+      "nugetId": "Xamarin.GooglePlayServices.Iid"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-instantapps",
+      "nugetId": "Xamarin.GooglePlayServices.InstantApps"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-location",
+      "nugetId": "Xamarin.GooglePlayServices.Location"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-maps",
+      "nugetId": "Xamarin.GooglePlayServices.Maps"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-measurement",
+      "nugetId": "Xamarin.GooglePlayServices.Measurement"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-measurement-api",
+      "nugetId": "Xamarin.GooglePlayServices.Measurement.Api"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-measurement-base",
+      "nugetId": "Xamarin.GooglePlayServices.Measurement.Base"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-measurement-impl",
+      "nugetId": "Xamarin.GooglePlayServices.Measurement.Impl"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-measurement-sdk",
+      "nugetId": "Xamarin.GooglePlayServices.Measurement.Sdk"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-measurement-sdk-api",
+      "nugetId": "Xamarin.GooglePlayServices.Measurement.Sdk.Api"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-mlkit-barcode-scanning",
+      "nugetId": "Xamarin.GooglePlayServices.MLKit.BarcodeScanning"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-mlkit-face-detection",
+      "nugetId": "Xamarin.GooglePlayServices.MLKit.FaceDetection"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-mlkit-image-labeling",
+      "nugetId": "Xamarin.GooglePlayServices.MLKit.ImageLabeling"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-mlkit-language-id",
+      "nugetId": "Xamarin.GooglePlayServices.MLKit.LanguageId"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-mlkit-text-recognition",
+      "nugetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-mlkit-text-recognition-common",
+      "nugetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition.Common"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-nearby",
+      "nugetId": "Xamarin.GooglePlayServices.Nearby"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-oss-licenses",
+      "nugetId": "Xamarin.GooglePlayServices.Oss.Licenses"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-pal",
+      "nugetId": "Xamarin.GooglePlayServices.PAL"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-panorama",
+      "nugetId": "Xamarin.GooglePlayServices.Panorama"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-password-complexity",
+      "nugetId": "Xamarin.GooglePlayServices.PasswordComplexity"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-pay",
+      "nugetId": "Xamarin.GooglePlayServices.Pay"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-phenotype",
+      "nugetId": "Xamarin.GooglePlayServices.Phenotype"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-places",
+      "nugetId": "Xamarin.GooglePlayServices.Places"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-places-placereport",
+      "nugetId": "Xamarin.GooglePlayServices.Places.PlaceReport"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-plus",
+      "nugetId": "Xamarin.GooglePlayServices.Plus"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-recaptcha",
+      "nugetId": "Xamarin.GooglePlayServices.Recaptcha"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-safetynet",
+      "nugetId": "Xamarin.GooglePlayServices.SafetyNet"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-stats",
+      "nugetId": "Xamarin.GooglePlayServices.Stats"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-streamprotect",
+      "nugetId": "Xamarin.GooglePlayServices.StreamProtect"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-tagmanager",
+      "nugetId": "Xamarin.GooglePlayServices.TagManager"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-tagmanager-api",
+      "nugetId": "Xamarin.GooglePlayServices.TagManager.Api"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-tagmanager-v4-impl",
+      "nugetId": "Xamarin.GooglePlayServices.TagManager.V4.Impl"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-tasks",
+      "nugetId": "Xamarin.GooglePlayServices.Tasks"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-vision",
+      "nugetId": "Xamarin.GooglePlayServices.Vision"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-vision-common",
+      "nugetId": "Xamarin.GooglePlayServices.Vision.Common"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-vision-face-contour-internal",
+      "nugetId": "Xamarin.GooglePlayServices.Vision.Face.Contour.Internal"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-vision-image-label",
+      "nugetId": "Xamarin.GooglePlayServices.Vision.ImageLabel"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-vision-image-labeling-internal",
+      "nugetId": "Xamarin.GooglePlayServices.Vision.ImageLabelingInternal"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-wallet",
+      "nugetId": "Xamarin.GooglePlayServices.Wallet"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-wearable",
+      "nugetId": "Xamarin.GooglePlayServices.Wearable"
+    },
+    {
+      "javaId": "com.google.android.libraries.places:places",
+      "nugetId": "Xamarin.GoogleAndroid.Libraries.Places"
+    },
+    {
+      "javaId": "com.google.android.libraries.places:places-compat",
+      "nugetId": "Xamarin.GoogleAndroid.Libraries.Places.Compat"
+    },
+    {
+      "javaId": "com.google.android.material:compose-theme-adapter",
+      "nugetId": "Xamarin.Google.Android.Material.Compose.Theme.Adapter"
+    },
+    {
+      "javaId": "com.google.android.material:material",
+      "nugetId": "Xamarin.Google.Android.Material"
+    },
+    {
+      "javaId": "com.google.android.odml:image",
+      "nugetId": "Xamarin.Google.Android.ODML.Image"
+    },
+    {
+      "javaId": "com.google.android.play:app-update",
+      "nugetId": "Xamarin.Google.Android.Play.App.Update"
+    },
+    {
+      "javaId": "com.google.android.play:app-update-ktx",
+      "nugetId": "Xamarin.Google.Android.Play.App.Update.Ktx"
+    },
+    {
+      "javaId": "com.google.android.play:asset-delivery",
+      "nugetId": "Xamarin.Google.Android.Play.Asset.Delivery"
+    },
+    {
+      "javaId": "com.google.android.play:asset-delivery-ktx",
+      "nugetId": "Xamarin.Google.Android.Play.Asset.Delivery.Ktx"
+    },
+    {
+      "javaId": "com.google.android.play:core",
+      "nugetId": "Xamarin.Google.Android.Play.Core"
+    },
+    {
+      "javaId": "com.google.android.play:core-common",
+      "nugetId": "Xamarin.Google.Android.Play.Core.Common"
+    },
+    {
+      "javaId": "com.google.android.play:core-ktx",
+      "nugetId": "Xamarin.Google.Android.Play.Core.Ktx"
+    },
+    {
+      "javaId": "com.google.android.play:feature-delivery",
+      "nugetId": "Xamarin.Google.Android.Play.Feature.Delivery"
+    },
+    {
+      "javaId": "com.google.android.play:feature-delivery-ktx",
+      "nugetId": "Xamarin.Google.Android.Play.Feature.Delivery.Ktx"
+    },
+    {
+      "javaId": "com.google.android.play:integrity",
+      "nugetId": "Xamarin.Google.Android.Play.Integrity"
+    },
+    {
+      "javaId": "com.google.android.play:integrity",
+      "nugetId": "Xamarin.Google.Android.Play.Integrity"
+    },
+    {
+      "javaId": "com.google.android.play:review",
+      "nugetId": "Xamarin.Google.Android.Play.Review"
+    },
+    {
+      "javaId": "com.google.android.play:review-ktx",
+      "nugetId": "Xamarin.Google.Android.Play.Review.Ktx"
+    },
+    {
+      "javaId": "com.google.android.ump:user-messaging-platform",
+      "nugetId": "Xamarin.Google.UserMessagingPlatform"
+    },
+    {
+      "javaId": "com.google.assistant.appactions:suggestions",
+      "nugetId": "Xamarin.Google.Assistant.AppActions.Suggestions"
+    },
+    {
+      "javaId": "com.google.assistant.appactions:widgets",
+      "nugetId": "Xamarin.Google.Assistant.AppActions.Widgets"
+    },
+    {
+      "javaId": "com.google.auto.value:auto-value-annotations",
+      "nugetId": "Xamarin.Google.AutoValue.Annotations"
+    },
+    {
+      "javaId": "com.google.code.findbugs:jsr305",
+      "nugetId": "Xamarin.Google.Code.FindBugs.JSR305"
+    },
+    {
+      "javaId": "com.google.code.gson:gson",
+      "nugetId": "GoogleGson"
+    },
+    {
+      "javaId": "com.google.crypto.tink:tink-android",
+      "nugetId": "Xamarin.Google.Crypto.Tink.Android"
+    },
+    {
+      "javaId": "com.google.dagger:dagger",
+      "nugetId": "Xamarin.Google.Dagger"
+    },
+    {
+      "javaId": "com.google.errorprone:error_prone_annotations",
+      "nugetId": "Xamarin.Google.ErrorProne.Annotations"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-abt",
+      "nugetId": "Xamarin.Firebase.Abt"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-ads",
+      "nugetId": "Xamarin.Firebase.Ads"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-ads-lite",
+      "nugetId": "Xamarin.Firebase.Ads.Lite"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-analytics",
+      "nugetId": "Xamarin.Firebase.Analytics"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-analytics-impl",
+      "nugetId": "Xamarin.Firebase.Analytics.Impl"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-analytics-ktx",
+      "nugetId": "Xamarin.Firebase.Analytics.Ktx"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-annotations",
+      "nugetId": "Xamarin.Firebase.Annotations"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-appcheck",
+      "nugetId": "Xamarin.Firebase.AppCheck"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-appcheck-interop",
+      "nugetId": "Xamarin.Firebase.AppCheck.Interop"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-appcheck-playintegrity",
+      "nugetId": "Xamarin.Firebase.AppCheck.PlayIntegrity"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-appcheck-safetynet",
+      "nugetId": "Xamarin.Firebase.AppCheck.SafetyNet"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-appindexing",
+      "nugetId": "Xamarin.Firebase.AppIndexing"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-auth",
+      "nugetId": "Xamarin.Firebase.Auth"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-auth-interop",
+      "nugetId": "Xamarin.Firebase.Auth.Interop"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-common",
+      "nugetId": "Xamarin.Firebase.Common"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-common-ktx",
+      "nugetId": "Xamarin.Firebase.Common.Ktx"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-components",
+      "nugetId": "Xamarin.Firebase.Components"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-config",
+      "nugetId": "Xamarin.Firebase.Config"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-core",
+      "nugetId": "Xamarin.Firebase.Core"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-crash",
+      "nugetId": "Xamarin.Firebase.Crash"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-crashlytics",
+      "nugetId": "Xamarin.Firebase.Crashlytics"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-crashlytics-ndk",
+      "nugetId": "Xamarin.Firebase.Crashlytics.NDK"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-database",
+      "nugetId": "Xamarin.Firebase.Database"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-database-collection",
+      "nugetId": "Xamarin.Firebase.Database.Collection"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-database-connection",
+      "nugetId": "Xamarin.Firebase.Database.Connection"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-datatransport",
+      "nugetId": "Xamarin.Firebase.Datatransport"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-dynamic-links",
+      "nugetId": "Xamarin.Firebase.Dynamic.Links"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-encoders",
+      "nugetId": "Xamarin.Firebase.Encoders"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-encoders-json",
+      "nugetId": "Xamarin.Firebase.Encoders.JSON"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-encoders-proto",
+      "nugetId": "Xamarin.Firebase.Encoders.Proto"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-firestore",
+      "nugetId": "Xamarin.Firebase.Firestore"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-functions",
+      "nugetId": "Xamarin.Firebase.Functions"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-iid",
+      "nugetId": "Xamarin.Firebase.Iid"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-iid-interop",
+      "nugetId": "Xamarin.Firebase.Iid.Interop"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-inappmessaging",
+      "nugetId": "Xamarin.Firebase.InAppMessaging"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-inappmessaging-display",
+      "nugetId": "Xamarin.Firebase.InAppMessaging.Display"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-installations",
+      "nugetId": "Xamarin.Firebase.Installations"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-installations-interop",
+      "nugetId": "Xamarin.Firebase.Installations.InterOp"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-invites",
+      "nugetId": "Xamarin.Firebase.Invites"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-measurement-connector",
+      "nugetId": "Xamarin.Firebase.Measurement.Connector"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-messaging",
+      "nugetId": "Xamarin.Firebase.Messaging"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-ml-common",
+      "nugetId": "Xamarin.Firebase.ML.Common"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-ml-model-interpreter",
+      "nugetId": "Xamarin.Firebase.ML.Model.Interpreter"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-ml-natural-language",
+      "nugetId": "Xamarin.Firebase.ML.Natural.Language"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-ml-natural-language-language-id-model",
+      "nugetId": "Xamarin.Firebase.ML.Natural.Language.Id.Model"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-ml-natural-language-smart-reply",
+      "nugetId": "Xamarin.Firebase.ML.Natural.Language.Smart.Reply"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-ml-natural-language-smart-reply-model",
+      "nugetId": "Xamarin.Firebase.ML.Natural.Language.Smart.Reply.Model"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-ml-natural-language-translate",
+      "nugetId": "Xamarin.Firebase.ML.Natural.Language.Translate"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-ml-natural-language-translate-model",
+      "nugetId": "Xamarin.Firebase.ML.Natural.Language.Translate.Model"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-ml-vision",
+      "nugetId": "Xamarin.Firebase.ML.Vision"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-ml-vision-automl",
+      "nugetId": "Xamarin.Firebase.ML.Vision.AutoML"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-ml-vision-barcode-model",
+      "nugetId": "Xamarin.Firebase.ML.Vision.BarCode.Model"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-ml-vision-face-model",
+      "nugetId": "Xamarin.Firebase.ML.Vision.Face.Model"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-ml-vision-image-label-model",
+      "nugetId": "Xamarin.Firebase.ML.Vision.Image.Label.Model"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-ml-vision-internal-vkp",
+      "nugetId": "Xamarin.Firebase.ML.Vision.Internal.Vkp"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-ml-vision-object-detection-model",
+      "nugetId": "Xamarin.Firebase.ML.Vision.Object.Detection.Model"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-perf",
+      "nugetId": "Xamarin.Firebase.Perf"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-storage",
+      "nugetId": "Xamarin.Firebase.Storage"
+    },
+    {
+      "javaId": "com.google.firebase:firebase-storage-common",
+      "nugetId": "Xamarin.Firebase.Storage.Common"
+    },
+    {
+      "javaId": "com.google.firebase:protolite-well-known-types",
+      "nugetId": "Xamarin.Firebase.ProtoliteWellKnownTypes"
+    },
+    {
+      "javaId": "com.google.flogger:flogger",
+      "nugetId": "Xamarin.Flogger"
+    },
+    {
+      "javaId": "com.google.flogger:flogger-system-backend",
+      "nugetId": "Xamarin.Flogger.SystemBackend"
+    },
+    {
+      "javaId": "com.google.guava:failureaccess",
+      "nugetId": "Xamarin.Google.Guava.FailureAccess"
+    },
+    {
+      "javaId": "com.google.guava:guava",
+      "nugetId": "Xamarin.Google.Guava"
+    },
+    {
+      "javaId": "com.google.guava:listenablefuture",
+      "nugetId": "Xamarin.Google.Guava.ListenableFuture"
+    },
+    {
+      "javaId": "com.google.j2objc:j2objc-annotations",
+      "nugetId": "Xamarin.Google.J2Objc.Annotations"
+    },
+    {
+      "javaId": "com.google.mlkit:barcode-scanning",
+      "nugetId": "Xamarin.Google.MLKit.BarcodeScanning"
+    },
+    {
+      "javaId": "com.google.mlkit:barcode-scanning-common",
+      "nugetId": "Xamarin.Google.MLKit.BarcodeScanning.Common"
+    },
+    {
+      "javaId": "com.google.mlkit:common",
+      "nugetId": "Xamarin.Google.MLKit.Common"
+    },
+    {
+      "javaId": "com.google.mlkit:digital-ink-recognition",
+      "nugetId": "Xamarin.Google.MLKit.DigitalInk.Recognition"
+    },
+    {
+      "javaId": "com.google.mlkit:face-detection",
+      "nugetId": "Xamarin.Google.MLKit.FaceDetection"
+    },
+    {
+      "javaId": "com.google.mlkit:image-labeling",
+      "nugetId": "Xamarin.Google.MLKit.ImageLabeling"
+    },
+    {
+      "javaId": "com.google.mlkit:image-labeling-automl",
+      "nugetId": "Xamarin.Google.MLKit.ImageLabeling.AutoML"
+    },
+    {
+      "javaId": "com.google.mlkit:image-labeling-common",
+      "nugetId": "Xamarin.Google.MLKit.ImageLabeling.Common"
+    },
+    {
+      "javaId": "com.google.mlkit:image-labeling-custom",
+      "nugetId": "Xamarin.Google.MLKit.ImageLabeling.Custom"
+    },
+    {
+      "javaId": "com.google.mlkit:image-labeling-custom-common",
+      "nugetId": "Xamarin.Google.MLKit.ImageLabeling.Custom.Common"
+    },
+    {
+      "javaId": "com.google.mlkit:image-labeling-default-common",
+      "nugetId": "Xamarin.Google.MLKit.ImageLabeling.Default.Common"
+    },
+    {
+      "javaId": "com.google.mlkit:language-id",
+      "nugetId": "Xamarin.Google.MLKit.Language.Id"
+    },
+    {
+      "javaId": "com.google.mlkit:language-id-common",
+      "nugetId": "Xamarin.Google.MLKit.Language.Id.Common"
+    },
+    {
+      "javaId": "com.google.mlkit:linkfirebase",
+      "nugetId": "Xamarin.Google.MLKit.LinkFirebase"
+    },
+    {
+      "javaId": "com.google.mlkit:mediapipe-internal",
+      "nugetId": "Xamarin.Google.MLKit.MediaPipe.Internal"
+    },
+    {
+      "javaId": "com.google.mlkit:object-detection",
+      "nugetId": "Xamarin.Google.MLKit.ObjectDetection"
+    },
+    {
+      "javaId": "com.google.mlkit:object-detection-common",
+      "nugetId": "Xamarin.Google.MLKit.ObjectDetection.Common"
+    },
+    {
+      "javaId": "com.google.mlkit:object-detection-custom",
+      "nugetId": "Xamarin.Google.MLKit.ObjectDetection.Custom"
+    },
+    {
+      "javaId": "com.google.mlkit:pose-detection",
+      "nugetId": "Xamarin.Google.MLKit.PoseDetection"
+    },
+    {
+      "javaId": "com.google.mlkit:pose-detection-accurate",
+      "nugetId": "Xamarin.Google.MLKit.PoseDetection.Accurate"
+    },
+    {
+      "javaId": "com.google.mlkit:pose-detection-common",
+      "nugetId": "Xamarin.Google.MLKit.PoseDetection.Common"
+    },
+    {
+      "javaId": "com.google.mlkit:smart-reply",
+      "nugetId": "Xamarin.Google.MLKit.SmartReply"
+    },
+    {
+      "javaId": "com.google.mlkit:smart-reply-common",
+      "nugetId": "Xamarin.Google.MLKit.SmartReply.Common"
+    },
+    {
+      "javaId": "com.google.mlkit:translate",
+      "nugetId": "Xamarin.Google.MLKit.Translate"
+    },
+    {
+      "javaId": "com.google.mlkit:vision-common",
+      "nugetId": "Xamarin.Google.MLKit.Vision.Common"
+    },
+    {
+      "javaId": "com.google.mlkit:vision-interfaces",
+      "nugetId": "Xamarin.Google.MLKit.Vision.Interfaces"
+    },
+    {
+      "javaId": "com.google.mlkit:vision-internal-vkp",
+      "nugetId": "Xamarin.Google.MLKit.Vision.Internal.Vkp"
+    },
+    {
+      "javaId": "com.google.protobuf:protobuf-javalite",
+      "nugetId": "Xamarin.Protobuf.JavaLite"
+    },
+    {
+      "javaId": "com.google.protobuf:protobuf-lite",
+      "nugetId": "Xamarin.Protobuf.Lite"
+    },
+    {
+      "javaId": "com.google.zxing:core",
+      "nugetId": "Xamarin.Google.ZXing.Core"
+    },
+    {
+      "javaId": "com.squareup:javapoet",
+      "nugetId": "Square.JavaPoet"
+    },
+    {
+      "javaId": "com.squareup.okhttp:okhttp",
+      "nugetId": "Square.OkHttp"
+    },
+    {
+      "javaId": "com.squareup.okhttp3:okhttp",
+      "nugetId": "Square.OkHttp3"
+    },
+    {
+      "javaId": "com.squareup.okhttp3:okhttp-urlconnection",
+      "nugetId": "Square.OkHttp3.UrlConnection"
+    },
+    {
+      "javaId": "com.squareup.okio:okio",
+      "nugetId": "Square.OkIO"
+    },
+    {
+      "javaId": "com.squareup.picasso:picasso",
+      "nugetId": "Square.Picasso"
+    },
+    {
+      "javaId": "com.squareup.retrofit:retrofit",
+      "nugetId": "Square.Retrofit"
+    },
+    {
+      "javaId": "dev.chrisbanes.snapper:snapper",
+      "nugetId": "Xamarin.Dev.ChrisBanes.Snapper"
+    },
+    {
+      "javaId": "io.github.aakira:napier",
+      "nugetId": "Xamarin.AAkira.Napier"
+    },
+    {
+      "javaId": "io.grpc:grpc-android",
+      "nugetId": "Xamarin.Grpc.Android"
+    },
+    {
+      "javaId": "io.grpc:grpc-api",
+      "nugetId": "Xamarin.Grpc.Api"
+    },
+    {
+      "javaId": "io.grpc:grpc-context",
+      "nugetId": "Xamarin.Grpc.Context"
+    },
+    {
+      "javaId": "io.grpc:grpc-core",
+      "nugetId": "Xamarin.Grpc.Core"
+    },
+    {
+      "javaId": "io.grpc:grpc-okhttp",
+      "nugetId": "Xamarin.Grpc.OkHttp"
+    },
+    {
+      "javaId": "io.grpc:grpc-protobuf-lite",
+      "nugetId": "Xamarin.Grpc.Protobuf.Lite"
+    },
+    {
+      "javaId": "io.grpc:grpc-stub",
+      "nugetId": "Xamarin.Grpc.Stub"
+    },
+    {
+      "javaId": "io.opencensus:opencensus-api",
+      "nugetId": "Xamarin.Io.OpenCensus.OpenCensusApi"
+    },
+    {
+      "javaId": "io.opencensus:opencensus-contrib-grpc-metrics",
+      "nugetId": "Xamarin.Io.OpenCensus.OpenCensusContribGrpcMetrics"
+    },
+    {
+      "javaId": "io.perfmark:perfmark-api",
+      "nugetId": "Xamarin.Io.PerfMark.PerfMarkApi"
+    },
+    {
+      "javaId": "io.reactivex.rxjava2:rxjava",
+      "nugetId": "Xamarin.Android.ReactiveX.RxJava"
+    },
+    {
+      "javaId": "io.reactivex.rxjava3:rxjava",
+      "nugetId": "Xamarin.Android.ReactiveX.RxJava3.RxJava"
+    },
+    {
+      "javaId": "javax.inject:javax.inject",
+      "nugetId": "Xamarin.JavaX.Inject"
+    },
+    {
+      "javaId": "org.checkerframework:checker-compat-qual",
+      "nugetId": "Xamarin.CheckerFramework.CheckerCompatQual"
+    },
+    {
+      "javaId": "org.checkerframework:checker-qual",
+      "nugetId": "Xamarin.CheckerFramework.CheckerQual"
+    },
+    {
+      "javaId": "org.chromium.net:cronet-api",
+      "nugetId": "Xamarin.Chromium.CroNet.Api"
+    },
+    {
+      "javaId": "org.chromium.net:cronet-common",
+      "nugetId": "Xamarin.Chromium.CroNet.Common"
+    },
+    {
+      "javaId": "org.chromium.net:cronet-embedded",
+      "nugetId": "Xamarin.Chromium.CroNet.Embedded"
+    },
+    {
+      "javaId": "org.chromium.net:cronet-fallback",
+      "nugetId": "Xamarin.Chromium.CroNet.Fallback"
+    },
+    {
+      "javaId": "org.codehaus.mojo:animal-sniffer-annotations",
+      "nugetId": "Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations"
+    },
+    {
+      "javaId": "org.jetbrains:annotations",
+      "nugetId": "Xamarin.Jetbrains.Annotations"
+    },
+    {
+      "javaId": "org.jetbrains.kotlin:kotlin-reflect",
+      "nugetId": "Xamarin.Kotlin.Reflect"
+    },
+    {
+      "javaId": "org.jetbrains.kotlin:kotlin-stdlib",
+      "nugetId": "Xamarin.Kotlin.StdLib"
+    },
+    {
+      "javaId": "org.jetbrains.kotlin:kotlin-stdlib-common",
+      "nugetId": "Xamarin.Kotlin.StdLib.Common"
+    },
+    {
+      "javaId": "org.jetbrains.kotlin:kotlin-stdlib-jdk7",
+      "nugetId": "Xamarin.Kotlin.StdLib.Jdk7"
+    },
+    {
+      "javaId": "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
+      "nugetId": "Xamarin.Kotlin.StdLib.Jdk8"
+    },
+    {
+      "javaId": "org.jetbrains.kotlinx:kotlinx-coroutines-android",
+      "nugetId": "Xamarin.KotlinX.Coroutines.Android"
+    },
+    {
+      "javaId": "org.jetbrains.kotlinx:kotlinx-coroutines-core",
+      "nugetId": "Xamarin.KotlinX.Coroutines.Core"
+    },
+    {
+      "javaId": "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm",
+      "nugetId": "Xamarin.KotlinX.Coroutines.Core.Jvm"
+    },
+    {
+      "javaId": "org.jetbrains.kotlinx:kotlinx-coroutines-guava",
+      "nugetId": "Xamarin.KotlinX.Coroutines.Guava"
+    },
+    {
+      "javaId": "org.jetbrains.kotlinx:kotlinx-coroutines-jdk8",
+      "nugetId": "Xamarin.KotlinX.Coroutines.Jdk8"
+    },
+    {
+      "javaId": "org.jetbrains.kotlinx:kotlinx-coroutines-reactive",
+      "nugetId": "Xamarin.KotlinX.Coroutines.Reactive"
+    },
+    {
+      "javaId": "org.jetbrains.kotlinx:kotlinx-coroutines-rx2",
+      "nugetId": "Xamarin.KotlinX.Coroutines.Rx2"
+    },
+    {
+      "javaId": "org.jetbrains.kotlinx:kotlinx-coroutines-rx3",
+      "nugetId": "Xamarin.KotlinX.Coroutines.Rx3"
+    },
+    {
+      "javaId": "org.reactivestreams:reactive-streams",
+      "nugetId": "Xamarin.Android.ReactiveStreams"
+    },
+    {
+      "javaId": "org.tensorflow:tensorflow-lite",
+      "nugetId": "Xamarin.TensorFlow.Lite"
+    },
+    {
+      "javaId": "org.tensorflow:tensorflow-lite-gpu",
+      "nugetId": "Xamarin.TensorFlow.Lite.Gpu"
+    }
+  ]
+}
