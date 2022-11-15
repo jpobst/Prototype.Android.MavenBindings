@@ -917,6 +917,10 @@
       "nugetId": "Xamarin.GooglePlayServices.Games"
     },
     {
+      "javaId": "com.google.android.gms:play-services-games-v2",
+      "nugetId": "Xamarin.GooglePlayServices.Games.V2"
+    },
+    {
       "javaId": "com.google.android.gms:play-services-gass",
       "nugetId": "Xamarin.GooglePlayServices.Gass"
     },
@@ -1063,6 +1067,22 @@
     {
       "javaId": "com.google.android.gms:play-services-tasks",
       "nugetId": "Xamarin.GooglePlayServices.Tasks"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-tflite-gpu",
+      "nugetId": "Xamarin.GooglePlayServices.TfLite.Gpu"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-tflite-impl",
+      "nugetId": "Xamarin.GooglePlayServices.TfLite.Impl"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-tflite-java",
+      "nugetId": "Xamarin.GooglePlayServices.TfLite.Java"
+    },
+    {
+      "javaId": "com.google.android.gms:play-services-tflite-support",
+      "nugetId": "Xamarin.GooglePlayServices.TfLite.Support"
     },
     {
       "javaId": "com.google.android.gms:play-services-vision",
@@ -1765,8 +1785,20 @@
       "nugetId": "Xamarin.TensorFlow.Lite"
     },
     {
+      "javaId": "org.tensorflow:tensorflow-lite-api",
+      "nugetId": "Xamarin.TensorFlow.Lite.Api"
+    },
+    {
       "javaId": "org.tensorflow:tensorflow-lite-gpu",
       "nugetId": "Xamarin.TensorFlow.Lite.Gpu"
+    },
+    {
+      "javaId": "org.tensorflow:tensorflow-lite-gpu-api",
+      "nugetId": "Xamarin.TensorFlow.Lite.Gpu.Api"
+    },
+    {
+      "javaId": "org.tensorflow:tensorflow-lite-support-api",
+      "nugetId": "Xamarin.TensorFlow.Lite.Support.Api"
     }
   ]
 }

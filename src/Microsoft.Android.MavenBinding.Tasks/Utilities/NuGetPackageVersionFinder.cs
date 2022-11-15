@@ -85,7 +85,7 @@ namespace Prototype.Android.MavenBinding.Tasks
 
 			// TODO: Define a well-known file that can be included in the package like "java-package.txt"
 
-			return new Artifact (match.Groups ["GroupId"].Value, match.Groups ["ArtifactId"].Value, match.Groups ["Version"].Value);
+			return new Artifact (match.Groups ["ArtifactId"].Value, match.Groups ["GroupId"].Value, match.Groups ["Version"].Value);
 		}
 	}
 }
