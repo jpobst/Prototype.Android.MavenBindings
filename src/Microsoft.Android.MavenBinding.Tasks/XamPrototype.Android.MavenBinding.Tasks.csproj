@@ -3,11 +3,11 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>9.0</LangVersion>
     <DefineConstants>$(DefineConstants);INTERNAL_NULLABLE_ATTRIBUTES</DefineConstants>
 
     <IsPackable>true</IsPackable>
-    <Version>0.0.7</Version>
+    <Version>0.0.8</Version>
     <Description>Preview feature for creating .NET for Android bindings directly from a Maven respository.</Description>
     <PackageOutputPath>../../nupkg</PackageOutputPath>
     

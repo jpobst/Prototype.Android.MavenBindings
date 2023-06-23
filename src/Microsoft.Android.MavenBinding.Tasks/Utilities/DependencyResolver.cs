@@ -21,11 +21,13 @@ namespace Prototype.Android.MavenBinding.Tasks
 
 		public bool IsDependencySatisfied (Dependency dependency, MicrosoftNuGetPackageFinder packages, LogWrapper log)
 		{
+			var dep_versions = MavenVersionRange.Parse (dependency.Version);
+
 			// TODO: Various fixups / parent POM 
 			var satisfied = artifacts.Any (a =>
 				a.GroupId == dependency.GroupId
 				&& a.Id == dependency.ArtifactId
-				&& dependency.Satisfies (a.Versions.First ())
+				&& dep_versions.Any (r => r.ContainsVersion (MavenVersion.Parse (a.Versions.First ())))
 			);
 
 			if (!satisfied) {
