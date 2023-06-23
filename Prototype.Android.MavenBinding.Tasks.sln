@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.32925.19
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XamPrototype.Android.MavenBinding.Tasks", "src\Microsoft.Android.MavenBinding.Tasks\XamPrototype.Android.MavenBinding.Tasks.csproj", "{19C3C144-D463-47CF-8C32-6AD90373362C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XamPrototype.Android.MavenBindings.Tests", "tests\XamPrototype.Android.MavenBindings.Tests\XamPrototype.Android.MavenBindings.Tests.csproj", "{E64CCF91-FC4E-469C-A8C6-ADF648C2D7CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{19C3C144-D463-47CF-8C32-6AD90373362C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19C3C144-D463-47CF-8C32-6AD90373362C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19C3C144-D463-47CF-8C32-6AD90373362C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E64CCF91-FC4E-469C-A8C6-ADF648C2D7CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E64CCF91-FC4E-469C-A8C6-ADF648C2D7CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E64CCF91-FC4E-469C-A8C6-ADF648C2D7CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E64CCF91-FC4E-469C-A8C6-ADF648C2D7CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
