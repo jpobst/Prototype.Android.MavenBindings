@@ -7,7 +7,7 @@
     <DefineConstants>$(DefineConstants);INTERNAL_NULLABLE_ATTRIBUTES</DefineConstants>
 
     <IsPackable>true</IsPackable>
-    <Version>0.0.10</Version>
+    <Version>0.0.11</Version>
     <Description>Preview feature for creating .NET for Android bindings directly from a Maven respository.</Description>
     <PackageOutputPath>../../nupkg</PackageOutputPath>
     

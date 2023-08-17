@@ -21,6 +21,11 @@ namespace Prototype.Android.MavenBinding.Tasks
 
 		public bool IsDependencySatisfied (Dependency dependency, MicrosoftNuGetPackageFinder packages, LogWrapper log)
 		{
+			if (!dependency.Version.HasValue ()) {
+				log.LogWarning ("Could not determine needed version of Maven dependency '{0}:{1}' (possibly due to not understanding a parent POM). Validation of this dependency will be skipped, but it still needs to be fulfilled.", dependency.GroupId, dependency.ArtifactId);
+				return true;
+			}
+
 			var dep_versions = MavenVersionRange.Parse (dependency.Version);
 
 			// TODO: Various fixups / parent POM 

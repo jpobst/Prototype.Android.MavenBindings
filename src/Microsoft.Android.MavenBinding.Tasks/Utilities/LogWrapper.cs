@@ -7,10 +7,14 @@ namespace Prototype.Android.MavenBinding.Tasks
 	public class LogWrapper
 	{
 		public List<string> Errors { get; } = new List<string> ();
+		public List<string> Warnings { get; } = new List<string> ();
 		public List<string> Messages { get; } = new List<string> ();
 
 		public virtual void LogError (string message, params object [] args)
 			=> Errors.Add (string.Format (message, args));
+
+		public virtual void LogWarning (string message, params object [] args)
+			=> Warnings.Add (string.Format (message, args));
 
 		public virtual void LogMessage (string message, params object [] args)
 			=> Messages.Add (string.Format (message, args));
@@ -32,6 +36,10 @@ namespace Prototype.Android.MavenBinding.Tasks
 			_log.LogError (message, args);
 		}
 
+		public override void LogWarning (string message, params object [] args)
+		{
+			_log.LogWarning (message, args);
+		}
 
 		public override void LogMessage (string message, params object [] args)
 		{
