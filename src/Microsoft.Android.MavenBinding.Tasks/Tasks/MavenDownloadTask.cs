@@ -7,7 +7,6 @@ using MavenNet;
 using MavenNet.Models;
 using Microsoft.Build.Framework;
 using Microsoft.Build.Utilities;
-using NuGet.LibraryModel;
 
 namespace Prototype.Android.MavenBinding.Tasks
 {
@@ -70,18 +69,15 @@ namespace Prototype.Android.MavenBinding.Tasks
 				if (artifact is null)
 					continue;
 
-				// Create resolved TaskItem
-				var result = new TaskItem (library.ItemSpec);
-
 				// Check for local files
-				if (TryGetLocalFiles (library, result, log)) {
-					library.CopyMetadataTo (result);
-					resolved.Add (result);
+				if (GetCachedArtifactOrDefault (library, log) is TaskItem cached_result) {
+					library.CopyMetadataTo (cached_result);
+					resolved.Add (cached_result);
 					continue;
 				}
 
 				// Check for repository files
-				if (await TryGetRepositoryFiles (artifact, library, result, log)) {
+				if (await GetRepositoryArtifactOrDefault (artifact, library, log) is TaskItem result) {
 					library.CopyMetadataTo (result);
 					resolved.Add (result);
 					continue;
@@ -118,7 +114,7 @@ namespace Prototype.Android.MavenBinding.Tasks
 			}
 		}
 
-		bool TryGetLocalFiles (ITaskItem item, TaskItem result, LogWrapper log)
+		TaskItem? GetCachedArtifactOrDefault (ITaskItem item, LogWrapper log)
 		{
 			var type = item.GetMetadataOrDefault ("Repository", "Central");
 
@@ -128,35 +124,38 @@ namespace Prototype.Android.MavenBinding.Tasks
 
 				if (!artifact_file.HasValue () || !pom_file.HasValue ()) {
 					log.LogError ("'PackageFile' and 'PomFile' must be specified when using a 'File' repository.");
-					return false;
+					return null;
 				}
 
 				if (!File.Exists (artifact_file)) {
 					log.LogError ("Specified package file '{0}' does not exist.", artifact_file);
-					return false;
+					return null;
 				}
 
 				if (!File.Exists (pom_file)) {
 					log.LogError ("Specified pom file '{0}' does not exist.", pom_file);
-					return false;
+					return null;
 				}
 
+				var result = new TaskItem (artifact_file);
+
+				result.SetMetadata ("ArtifactSpec", item.ItemSpec);
 				result.SetMetadata ("ArtifactFile", artifact_file);
 				result.SetMetadata ("ArtifactPom", pom_file);
 
-				return true;
+				return result;
 			}
 
-			return false;
+			return null;
 		}
 
-		async System.Threading.Tasks.Task<bool> TryGetRepositoryFiles (Artifact artifact, ITaskItem item, TaskItem result, LogWrapper log)
+		async System.Threading.Tasks.Task<TaskItem?> GetRepositoryArtifactOrDefault (Artifact artifact, ITaskItem item, LogWrapper log)
 		{
 			// Initialize repo
 			var repository = GetRepository (item);
 
 			if (repository is null)
-				return false;
+				return null;
 
 			artifact.SetRepository (repository);
 
@@ -164,18 +163,21 @@ namespace Prototype.Android.MavenBinding.Tasks
 			var artifact_file = await MavenExtensions.DownloadPayload (artifact, MavenCacheDirectory, log);
 
 			if (artifact_file is null)
-				return false;
+				return null;
 
 			// Download POM
 			var pom_file = await MavenExtensions.DownloadPom (artifact, MavenCacheDirectory, log);
 
 			if (pom_file is null)
-				return false;
+				return null;
 
+			var result = new TaskItem (artifact_file);
+
+			result.SetMetadata ("ArtifactSpec", item.ItemSpec);
 			result.SetMetadata ("ArtifactFile", artifact_file);
 			result.SetMetadata ("ArtifactPom", pom_file);
 
-			return true;
+			return result;
 		}
 
 		async System.Threading.Tasks.Task<TaskItem?> TryGetParentPom (ITaskItem item, LogWrapper log)

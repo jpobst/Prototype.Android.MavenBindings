@@ -36,7 +36,7 @@
 
     <!-- Add @(AndroidMavenLibrary)'s to @(AndroidLibrary)'s. -->
     <ItemGroup>
-      <AndroidLibrary Include="%(_ResolvedAndroidMavenLibraries.ArtifactFile)" />
+      <AndroidLibrary Include="@(_ResolvedAndroidMavenLibraries)" />
     </ItemGroup>
     
   </Target>
