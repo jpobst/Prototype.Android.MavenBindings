@@ -43,7 +43,7 @@ namespace Prototype.Android.MavenBinding.Tasks
 		public void AddMavenAndroidLibraries (ITaskItem []? tasks, LogWrapper log)
 		{
 			foreach (var task in tasks.OrEmpty ()) {
-				var id = task.ItemSpec;
+				var id = task.GetMetadataOrDefault ("ArtifactSpec", task.ItemSpec);
 				var version = task.GetRequiredMetadata ("Version", log);
 
 				if (version is null)
