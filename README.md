@@ -1,3 +1,14 @@
+## Update
+
+NOTE: Versions of these features have been added to .NET 9 Preview 3 and thus there will not be any future updates to this repository.
+
+- [`<AndroidMavenLibrary>`](https://github.com/xamarin/xamarin-android/blob/main/Documentation/guides/AndroidMavenLibrary.md)
+- [Java Dependency Verification](https://github.com/xamarin/xamarin-android/blob/main/Documentation/guides/JavaDependencyVerification.md)
+
+---
+
+## Original Content
+
 We are prototyping a new feature for .NET for Android 8 that allows Java libraries to be bound directly from Maven repositories.  Additionally, it uses the `.pom` file provided to ensure that the dependencies needed by the Java library are met.
 
 In order to get early testing and feedback, we are shipping a preview of this as a NuGet package that can be used from .NET 6/7.
